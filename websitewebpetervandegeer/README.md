@@ -19,10 +19,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Peter van de Geer
 
   #### Je startniveau:
-  zwart
+  rood en zwart
 
   #### Je focus:
-  responsive
+  Mijn focus gaat zijn op het responsive maken van de site, maar ik wil ook kijken naar de surface plane.
  
 </details>
 
@@ -40,12 +40,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   (https://www.lego.com/nl-nl) (https://www.lego.com/nl-nl/themes/star-wars)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  lego homepagina
-  <img src="images/legohomepagina.jpg" width="375px" alt="landingpage van lego.com">
+  lego homepagina (pc)
+  <img src="images/legohomepagina.png" width="375px" alt="landingpage van lego.com">
+
+  (iphone 14 pro)
+  <img src="images/iphonelegohomepagina.jpg" width="375px" alt="landingpage van lego.com">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  starwars theme starwars pagina 
-  <img src="images/legothemestarwarspagina.jpg" width="375px" alt="pagina met alle starwars sets">
+  starwars theme starwars pagina (pc)
+  <img src="images/legothemestarwarspagina.png" width="375px" alt="pagina met alle starwars sets">
+
+  (iphone 14 pro)
+  <img src="images/iphonelegothemestarwarspagina.jpg" width="375px" alt="pagina met alle starwars sets">
  
 </details>
 
