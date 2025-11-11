@@ -36,22 +36,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  lego homepagina en starwars theme starwars pagina 
-  (https://www.lego.com/nl-nl) (https://www.lego.com/nl-nl/themes/star-wars)
+  lego homepagina en kerstcadeau's 2025 pagina
+  (https://www.lego.com/nl-nl) (https://www.lego.com/nl-nl/holiday-gifts)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   lego homepagina (pc)
   <img src="images/legohomepagina.png" width="375px" alt="landingpage van lego.com">
 
-  (iphone 14 pro)
+  lego homepagina (iphone 14 pro)
   <img src="images/iphonelegohomepagina.jpg" width="375px" alt="landingpage van lego.com">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  starwars theme starwars pagina (pc)
-  <img src="images/legothemestarwarspagina.png" width="375px" alt="pagina met alle starwars sets">
+  starwars kerstcadeau's 2025 pagina (pc)
+  <img src="images/legokerstcadeauspagina.png" width="375px" alt="pagina over kerstcadeau's">
 
-  (iphone 14 pro)
-  <img src="images/iphonelegothemestarwarspagina.jpg" width="375px" alt="pagina met alle starwars sets">
+  starwars kerstcadeau's 2025 pagina (iphone 14 pro)
+  <img src="images/iphonelegokerstcadeauspagina.JPG" width="375px" alt="pagina over kerstcadeau's">
  
 </details>
 
