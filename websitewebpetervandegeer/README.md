@@ -44,7 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="images/legohomepagina.png" width="375px" alt="landingpage van lego.com">
 
   lego homepagina (iphone 14 pro)
-  <img src="images/iphonelegohomepagina.jpg" width="375px" alt="landingpage van lego.com">
+  <img src="images/iphonelegohomepagina.JPG" width="375px" alt="landingpage van lego.com">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   starwars kerstcadeau's 2025 pagina (pc)
