@@ -64,8 +64,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  Wat mij is opgevallen na het gebruiken van de screenreader van microsoft, is  dat Lego.com een hele goede toegankelijkheid heeft voor gebruikers met een e-reader. Dit omdat er heel erg uitgebreidde alt tags en aria labels zijn gebruikt. Hierdoor kunnen mensen die slechterziend zijn, makkelijker navigeren door de website. 
 
-</details>
+  Uit de WCAG komen de volgende punten naar boven:
+  Goed:
+  Er is heel goed rekening gehouden met appearance, control, mobile, media, images, list, headings, content en keyboard.
+
+  Minder goed:
+  Er zijn zo ver ik zie geen media queries gebruikt. Hierdoor zijn er ook geen animaties, 
+  die de prefers-reduced-motion media query naleven.
+  Sommige tekst is zwart op een donker teal kleurige oppervlak in plaats van een witte tekst.
+
+  Slecht:
+  De html code bevat meer dan 1001 errors. 
+
+  </details>
 
 
 
@@ -74,15 +87,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  Homepagina breakdown mobiele versie. Ga ik helemaal uitwerken, want content verschilt genoeg van elkaar: 
+  <img src="images/iphonelegohomepagina.JPG" width="375px" alt="breakdown van de hele homepagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  Kerstcadeau's pagina breakdown mobiele versie:
+  <img src="images/iphonelegokerstcadeauspaginabreakdown.jpg" width="375px" alt="breakdown van de hele kerstcadeau's pagina">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  ### dynamisch deel (article): 
+  <img src="images/iphonebreakdownarticle.png" width="375px" alt="breakdown van eerste gedeelte van kerstcadeau's pagina">
 
+  <!-- ### wellicht nog een dynamisch deel (bijv filter):  -->
+  <!-- <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> -->
 </details>
 
 
