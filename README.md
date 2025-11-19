@@ -48,10 +48,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   starwars kerstcadeau's 2025 pagina (pc)
-  <img src="images/legokerstcadeauspagina.png" width="375px" alt="pagina over kerstcadeau's">
+  <img src="images/legoadultswelcome.png" width="375px" alt="pagina voor AFOL's (Adult Fan Of Lego)">
 
   starwars kerstcadeau's 2025 pagina (iphone 14 pro)
-  <img src="images/iphonelegokerstcadeauspagina.JPG" width="375px" alt="pagina over kerstcadeau's">
+  <img src="images/iphonelegoadultswelcome.JPG" width="375px" alt="pagina voor AFOL's (Adult Fan Of Lego)">
  
 </details>
 
@@ -87,14 +87,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  Homepagina breakdown mobiele versie. Ga ik helemaal uitwerken, want content verschilt genoeg van elkaar: 
-  <img src="images/iphonelegohomepagina.JPG" width="375px" alt="breakdown van de hele homepagina">
+  Mijn homepagina blijft alle onderdelen behouden,want content verschilt genoeg van elkaar.
 
-  Kerstcadeau's pagina breakdown mobiele versie:
-  <img src="images/iphonelegokerstcadeauspaginabreakdown.jpg" width="375px" alt="breakdown van de hele kerstcadeau's pagina">
+  Adultswelcomescherm breakdown mobiele versie, hier ga ik een aantal onderdelen verwijderen: 
+  <img src="images/onderdelenweghalenadultswelcomescherm.jpg" width="375px" alt="weggestreepte onderdelen van het adultswelcome scherm in het rood, de rest wordt behouden">
 
-  ### dynamisch deel (article): 
-  <img src="images/iphonebreakdownarticle.png" width="375px" alt="breakdown van eerste gedeelte van kerstcadeau's pagina">
+  Adultswelcome pagina breakdownschets mobiele versie:
+  <img src="images//breakdownschetslegoadultswelcomepagina.jpg" width="375px" alt="breakdown van de hele adults welcome pagina">
+
+  homepagina breakdownschets mobiele versie:
+  <img src="images/breakdownschetslegohomepagina.jpg" width="375px" alt="breakdown van de hele homepagina">
+
+  <!--### dynamisch deel (article): 
+  <img src="images/iphonebreakdownarticle.png" width="375px" alt="breakdown van eerste gedeelte van kerstcadeau's pagina"> -->
 
   <!-- ### wellicht nog een dynamisch deel (bijv filter):  -->
   <!-- <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> -->
@@ -251,8 +256,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. CeraPro fonts van de lego website, gedownload van: https://en.bestfonts.pro/font/cera-pro
+  2. foto's en video van de lego site: https://www.lego.com/nl-nl/categories/adults-welcome , https://www.lego.com/nl-nl
   3. ...
 
 </details>
