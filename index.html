@@ -3,7 +3,8 @@
 	
 <head>
 	<meta charset="UTF-8">
-	<meta name="Peter van de Geer" content="Homepagina van lego.com waar alle recente updates staan en waar je geredirect kan worden naar belangrijke pagina's.">
+	<meta name="author" content="Peter van de Geer">
+	<meta name="description" content="Homepagina van lego.com waar alle recente updates staan en waar je geredirect kan worden naar belangrijke pagina's.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Lego homepagina</title>
@@ -123,7 +124,6 @@
 		<section>
 			<h2>Bekijk wat iedereen bouwt</h2>
 			<p>Ga een nieuwe bouwavontuur aan met deze inspirerende LEGO sets</p>
-			
 			<ul>
 				<li>
 					<img src="#" alt="Feestelijke kersttrein op een kastje">
@@ -139,17 +139,20 @@
 		<section>
 			<h2>Deze week in de aandacht</h2>
 			<p>Een kijkje van dichtbij op LEGO momenten die de moeite waard zijn - van seizoensgebonden pret tot speciale momenten</p>
-		
-			<ul>
-				<li><button class="active">Cadeaus voor volwassenen</button></li>
-				<li><button>Cadeaus voor vaders</button></li>
-				<LI><button>Cadeaus voor tieners</button></LI>
-			</ul>
-			<h3>Deze cadeaus brengen vreugde</h3>
-			<img src="#" alt="Vrouw speelt met lego trein set in feestelijke kerst kamer">
-			<p>Deel je passie voor speelplezier met LEGO sets voor volwassenen.</p>
-			<a href="#">Nu winkelen</a>
-			<a href="#">Meer info</a>
+			
+			<nav>
+				<a href="#tab1" aria-controls="content">Cadeaus voor volwassenen</a>
+				<a href="#tab2" aria-controls="content">Cadeaus voor vaders</a>
+				<a href="#tab2" aria-controls="content">Cadeaus voor tieners</a>
+			</nav>
+
+			<section id="content tab volwassenen" aria-live="polite" role="region">
+				<h3>Deze cadeaus brengen vreugde</h3>
+				<img src="#" alt="Vrouw speelt met lego trein set in feestelijke kerst kamer">
+				<p>Deel je passie voor speelplezier met LEGO sets voor volwassenen.</p>
+				<a href="#">Nu winkelen</a>
+				<a href="#">Meer info</a>
+			</section>
 		</section>
 
 		<section>
@@ -179,12 +182,80 @@
 		</section>
 
 		<section>
+			<h2>Hidden maken</h2>
 			<p>Welkom bij de officiële LEGO® winkel, de fantastische thuisbasis van LEGO bouwspeelgoed, <a href="#">cadeaus</a>, prachtige blikvangers en nog veel meer voor <a href="#">meisjes</a>, <a href="#">jongens</a>, <a href="#">kinderen</a> en volwassenen. Vind het perfecte cadeau voor peuters, <a href="#">kinderen</a>, tieners en volwassenen voor <a href="#">verjaardagen</a> of andere gelegenheden zoals <a href="#">Valentijnsdag</a>, <a href="#">Moederdag</a> en <a href="#">Vaderdag</a>. We zorgen ervoor dat je eenvoudig kunt shoppen en speelgoed vindt dat goed is voor urenlang fantasievol</p>
 		</section>
 	</main>
 
 	<footer>
+		<img src="images/legologo.svg" alt="LEGO logo">
+		<a href="#">Nederland</a>
+		<ul>
+			<li><a href="#">Cadeaubonnen</a></li>
+			<li><a href="#">Laat je inspireren</a></li>
+			<li><a href="#">LEGO catalogi</a></li>
+			<li><a href="#">Store zoeken</a></li>
+		</ul>
+		<h2>ABONNEREN OP DIGITALE MARKETING E-MAILS</h2>
+		<form> <!--De algemene info over forms heb ik van: https://www.w3schools.com/html/html_forms.asp-->
+			<input type="email" name="email" placeholder="je e-mailadres"> <!-- Ik heb deze placeholder attribute van: https://stackoverflow.com/questions/781473/how-to-create-a-label-inside-an-input-element-->
+			<input type="submit">
+		</form>
+		<button class="uitklapbaar">OVER ONS</button>	<!--Collapsable buttons heb ik van: https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+		<ul> 
+  			<li><a href="#">Over de LEGO group</a></li>
+			<li><a href="#">LEGO nieuws</a></li>
+			<li><a href="#">Duurzaamheid</a></li>
+			<li><a href="#">Transparantieverklaring van de supplychain</a></li>
+			<li><a href="#">LEGO® productcertificering</a></li>
+			<li><a href="#">LEGO carrières</a></li>
+			<li><a href="#">LEGO Complience Line</a></li>
+		</ul>	
+		<button class="uitklapbaar">ONDERSTEUNING</button>	
+		<ul> 
+  			<li><a href="#">Contact opnemen</a></li>
+			<li><a href="#">Bouwinstructies</a></li>
+			<li><a href="#">Vervangende onderdelen</a></li>
+			<li><a href="#">Verzending en administratie</a></li>
+			<li><a href="#">Betaalmethoden</a></li>
+			<li><a href="#">Voorwaarden en bepalingen</a></li>
+			<li><a href="#">Terugroepacties</a></li>
+		</ul>	
+		<button class="uitklapbaar">ATTRACTIES</button>	
+		<ul> 
+  			<li><a href="#">LEGO® House</a></li>
+			<li><a href="#">LEGOLAND® Parks</a></li>
+			<li><a href="#">LEGOLAND Discovery Centers</a></li>
 
+		</ul>	
+		<button class="uitklapbaar">MEER OVER ONS</button>	
+		<ul> 
+  			<li><a href="#">LEGO Magazine (GRATIS)</a></li>
+			<li><a href="#">LEGO Education</a></li>
+			<li><a href="#">LEGO Ideas</a></li>
+			<li><a href="#">LEGO Foundation</a></li>
+			<li><a href="#">Aanbiedingen voor studenten</a></li>
+			<li><a href="#">Partnerprogramma</a></li>
+		</ul>	
+
+		<h3>VOLG ONS</h3>
+		<ul>
+			<li><a href="#"><img src="#" alt="Naar de LEGO Facebook pagina"></a></li>
+			<li><a href="#"><img src="#" alt="Naar de LEGO Twitter pagina"></a></li>
+			<li><a href="#"><img src="#" alt="Naar de LEGO Instagram pagina"></a></li>
+			<li><a href="#"><img src="#" alt="Naar de LEGO Youtube pagina"></a></li>
+		</ul>
+
+		<ul>
+			<li><a href="#">Privacybeleid</a></li>
+			<li><a href="#">Cookies</a></li>
+			<li><a href="#">Juridische verklaring</a></li>
+			<li><a href="#">Gebruiksvoorwaarden</a></li>
+			<li><a href="#">Toegankelijkheid</a></li>
+			<li><a href="#">Cookie-instellingen</a></li>
+		</ul>
+
+		<p>LEGO System A/S, DK-7190 Billund, Denmark. Personen die online aankopen doen, moeten 18 jaar of ouder zijn. LEGO, het LEGO logo, de minifiguur, DUPLO, het FRIENDS-logo, het MINIFIGUREN-logo, DREAMZzz, NINJAGO, VIDIYO en MINDSTORMS zijn handelsmerken van de LEGO Groep. ©2025 The LEGO Group. Alle rechten voorbehouden. Bij gebruik van deze website stem je in met de gebruiksvoorwaarden.</p>
 	</footer>
 
 	<script defer src="scripts/script.js"></script>
