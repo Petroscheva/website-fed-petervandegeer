@@ -27,6 +27,67 @@
 /*****************/
 /* EIGEN STYLING */
 /*****************/
+/*ik heb de info over een skiplink gehaald van: https://www.w3schools.com/accessibility/accessibility_skip_links.php#:~:text=The%20skip%20link%20is%20a,to%20it%20with%20an%20anchor.&text=That's%20it.*/
+.skiplink {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
-/* jouw code */
+.skiplink:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
 
+
+/*ik heb de info over het verplaatsen van de driehoek van een summary van: https://stackoverflow.com/questions/56758098/how-to-position-detail-marker-to-come-after-summary*/
+details>summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary::after {
+  content: ' ►';
+}
+details[open] summary:after {
+  content: " ▼";
+}
+
+.nieuwhidden{
+  Display: hidden;
+}
+
+.themashidden{
+  Display: hidden;
+}
+
+
+
+dialog::backdrop {
+	background-color:#000000;
+	backdrop-filter:blur(.5em);
+}
+
+html:has(header dialog[open]) {
+	overflow:hidden;
+	scrollbar-gutter: stable;
+}
+
+dialog button.close {
+	/* STAP 3. */
+	/* JOUW CODE HIER */
+  /* rechtsboven in dialog (dialog is al fixed) */
+  /* qua maat 3em x 3em */
+	
+	position:absolute;
+	top:0;
+	right:0;
+	width:3em;
+	aspect-ratio:1;
+}

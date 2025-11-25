@@ -15,7 +15,38 @@
 </head>
 
 <body>
+	<dialog class="modal">
+		<form method="dialog">
+			<section>
+				<h2>Lego.com</h2>
+				<img src="#" alt="lego blokje">
+				<img src="#" alt="tasje">
+				<img src="#" alt="vraagteken in textwolkje">
+				<p>U gaat nu kennismaken met LEGO.com.</p>
+				<p>U kunt winkelen, support vragen en meer.</p>
+				<button>Doorgaan</button>
+			</section>
+			<section>
+				<h2>De Speelplek</h2>
+				<img src="#" alt="twee lego poppetjes, één jongen en één meisje. Jongen heeft een controller vast en het meisje een telefoon.">
+				<p>Speel games, bekijk video's en meer!</p>
+				<a href="#">Beginnen met spelen</a>
+			</section>
+		</form>
+		<p>We willen u laten weten dat we cookies op uw apparaat plaatsen die uw keuzes op LEGO.com onthouden, bijvoorbeeld het land waar u woont, uw hoogste score en uw LEGO-account. We plaatsen ook cookies die ons helpen de website te laten werken. Bekijk voor meer informatie ons <a href="#">Cookiebeleid</a> en ons Privaxybeleid.</p>
+	</dialog>
+
 	<header>
+	<a href="#main" class="skiplink">Skip navigatie en ga naar pagina inhoud</a> <!-- ik heb de info over een skiplink gehaald van: https://www.w3schools.com/accessibility/accessibility_skip_links.php#:~:text=The%20skip%20link%20is%20a,to%20it%20with%20an%20anchor.&text=That's%20it.-->
+	<div>
+		<button><img src="#" alt="terugknop"></button>
+		<p>GRATIS bezorging voor bestellingen vanaf €55!*</p>
+		<p>Voorproefjes van Black Friday-deals komen eraan op 28-11-2025*</p>
+		<p>Bespaar met de LEGO® Insiders-prijs*</p>
+		<a href="#">Meer info</a>
+		<button><img src="#" alt="verderknop"></button>
+		<button><img src="#" alt="sluitknop"></button>
+	</div>
 	<nav>
         <ul>
 			<button aria-hidden="true"><img src="#" alt="hamburger menu"></button>
@@ -28,7 +59,7 @@
     </nav>
 	</header>
 
-	<main>
+	<main id="main">
 		<section>
 			<img src="#" alt="lego insiders promotie foto, man bouwt LEGO® Icons Tropisch aquarium set">
 			<ul>
@@ -43,12 +74,11 @@
 
 		<section>
 			<nav>
-				<a href="#tab" aria-controls="content">Nieuw</a>
-				<a href="#tab" aria-controls="content">Cadeaus</a>
-				<a href="#tab" aria-controls="content">Thema's</a>
+				<button aria-expanded="true" aria-controls="Nieuwcontent">Nieuw</button>
+				<button aria-expanded="false" aria-controls="Themascontent">Thema's</button>
 			</nav>
-			<section id="content" aria-live="polite" role="region">
-				<ul class="content tab 1">
+			<section id="sectie1" class="Nieuw" aria-live="polite" role="region">
+				<ul>
 					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
 					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
 					<li><a href="#">Aanbiedingen<img src="#" alt="Gouden LEGO blokje"></a></li>
@@ -58,7 +88,7 @@
 					<li><a href="#">Winkel voor kerstmis<img src="#" alt="Gouden LEGO blokje"></a></li>
 					<li><a href="#">Geweldige beloningen<img src="#" alt="Gouden LEGO blokje"></a></li>
 				</ul>
-				<ul class="content tab 2">
+				<ul>
 					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
 					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
 					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
@@ -68,7 +98,40 @@
 					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
 					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
 				</ul>
-				<ul class="content tab 3">
+				<ul>
+					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+				</ul>
+			</section>    
+
+			<section id="sectie2" class="Themas" aria-live="polite" role="region">
+				<ul>
+					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Aanbiedingen<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Best verkocht<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Binnenkort uit handel<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Adventkalenders<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Winkel voor kerstmis<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Geweldige beloningen<img src="#" alt="Gouden LEGO blokje"></a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+				</ul>
+				<ul>
 					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
 					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
 					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
@@ -196,49 +259,59 @@
 			<li><a href="#">LEGO catalogi</a></li>
 			<li><a href="#">Store zoeken</a></li>
 		</ul>
-		<h2>ABONNEREN OP DIGITALE MARKETING E-MAILS</h2>
 		<form> <!--De algemene info over forms heb ik van: https://www.w3schools.com/html/html_forms.asp-->
+			<h2>Abonneren op digitale marketing-e-mails</h2>
 			<input type="email" name="email" placeholder="je e-mailadres"> <!-- Ik heb deze placeholder attribute van: https://stackoverflow.com/questions/781473/how-to-create-a-label-inside-an-input-element-->
 			<input type="submit">
 		</form>
-		<button class="uitklapbaar">OVER ONS</button>	<!--Collapsable buttons heb ik van: https://www.w3schools.com/howto/howto_js_collapsible.asp-->
-		<ul> 
-  			<li><a href="#">Over de LEGO group</a></li>
-			<li><a href="#">LEGO nieuws</a></li>
-			<li><a href="#">Duurzaamheid</a></li>
-			<li><a href="#">Transparantieverklaring van de supplychain</a></li>
-			<li><a href="#">LEGO® productcertificering</a></li>
-			<li><a href="#">LEGO carrières</a></li>
-			<li><a href="#">LEGO Complience Line</a></li>
-		</ul>	
-		<button class="uitklapbaar">ONDERSTEUNING</button>	
-		<ul> 
-  			<li><a href="#">Contact opnemen</a></li>
-			<li><a href="#">Bouwinstructies</a></li>
-			<li><a href="#">Vervangende onderdelen</a></li>
-			<li><a href="#">Verzending en administratie</a></li>
-			<li><a href="#">Betaalmethoden</a></li>
-			<li><a href="#">Voorwaarden en bepalingen</a></li>
-			<li><a href="#">Terugroepacties</a></li>
-		</ul>	
-		<button class="uitklapbaar">ATTRACTIES</button>	
-		<ul> 
-  			<li><a href="#">LEGO® House</a></li>
-			<li><a href="#">LEGOLAND® Parks</a></li>
-			<li><a href="#">LEGOLAND Discovery Centers</a></li>
+		<details>
+  			<summary>Over ons</summary>
+  			<ul> 
+  				<li><a href="#">Over de LEGO group</a></li>
+				<li><a href="#">LEGO nieuws</a></li>
+				<li><a href="#">Duurzaamheid</a></li>
+				<li><a href="#">Transparantieverklaring van de supplychain</a></li>
+				<li><a href="#">LEGO® productcertificering</a></li>
+				<li><a href="#">LEGO carrières</a></li>
+				<li><a href="#">LEGO Complience Line</a></li>
+			</ul>	
+		</details>
 
-		</ul>	
-		<button class="uitklapbaar">MEER OVER ONS</button>	
-		<ul> 
-  			<li><a href="#">LEGO Magazine (GRATIS)</a></li>
-			<li><a href="#">LEGO Education</a></li>
-			<li><a href="#">LEGO Ideas</a></li>
-			<li><a href="#">LEGO Foundation</a></li>
-			<li><a href="#">Aanbiedingen voor studenten</a></li>
-			<li><a href="#">Partnerprogramma</a></li>
-		</ul>	
+		<details>
+  			<summary>Ondersteuning</summary>
+  			<ul> 
+  				<li><a href="#">Contact opnemen</a></li>
+				<li><a href="#">Bouwinstructies</a></li>
+				<li><a href="#">Vervangende onderdelen</a></li>
+				<li><a href="#">Verzending en administratie</a></li>
+				<li><a href="#">Betaalmethoden</a></li>
+				<li><a href="#">Voorwaarden en bepalingen</a></li>
+				<li><a href="#">Terugroepacties</a></li>
+			</ul>	
+		</details>
 
-		<h3>VOLG ONS</h3>
+		<details>
+  			<summary>Attracties</summary>
+  			<ul> 
+  				<li><a href="#">LEGO® House</a></li>
+				<li><a href="#">LEGOLAND® Parks</a></li>
+				<li><a href="#">LEGOLAND Discovery Centers</a></li>
+			</ul>	
+		</details>
+
+		<details>
+  			<summary>Meer over ons</summary>
+  			<ul> 
+  				<li><a href="#">LEGO Magazine (GRATIS)</a></li>
+				<li><a href="#">LEGO Education</a></li>
+				<li><a href="#">LEGO Ideas</a></li>
+				<li><a href="#">LEGO Foundation</a></li>
+				<li><a href="#">Aanbiedingen voor studenten</a></li>
+				<li><a href="#">Partnerprogramma</a></li>
+			</ul>	
+		</details>
+
+		<h2>VOLG ONS</h2>
 		<ul>
 			<li><a href="#"><img src="#" alt="Naar de LEGO Facebook pagina"></a></li>
 			<li><a href="#"><img src="#" alt="Naar de LEGO Twitter pagina"></a></li>
