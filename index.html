@@ -19,16 +19,17 @@
 		<form method="dialog">
 			<section>
 				<h2>Lego.com</h2>
-				<img src="#" alt="lego blokje">
-				<img src="#" alt="tasje">
-				<img src="#" alt="vraagteken in textwolkje">
+				<img src="images/legoblokzwartelijn.png" alt="LEGO blok icoontje">
+				<img src="images/tasje.png" alt="tas icoontje">
+				<img src="images/vraagtekentekstwolk.png" alt="vraagteken in textwolk icoontje">
 				<p>U gaat nu kennismaken met LEGO.com.</p>
 				<p>U kunt winkelen, support vragen en meer.</p>
 				<button>Doorgaan</button>
 			</section>
+			<img src="images/legologo.svg" alt="LEGO logo">
 			<section>
 				<h2>De Speelplek</h2>
-				<img src="#" alt="twee lego poppetjes, één jongen en één meisje. Jongen heeft een controller vast en het meisje een telefoon.">
+				<img src="images/despeelplek.webp" alt="twee LEGO poppetjes, één jongen en één meisje. Jongen heeft een controller vast en het meisje een telefoon.">
 				<p>Speel games, bekijk video's en meer!</p>
 				<a href="#">Beginnen met spelen</a>
 			</section>
@@ -37,109 +38,98 @@
 	</dialog>
 
 	<header>
-	<a href="#main" class="skiplink">Skip navigatie en ga naar pagina inhoud</a> <!-- ik heb de info over een skiplink gehaald van: https://www.w3schools.com/accessibility/accessibility_skip_links.php#:~:text=The%20skip%20link%20is%20a,to%20it%20with%20an%20anchor.&text=That's%20it.-->
-	<div>
-		<button><img src="#" alt="terugknop"></button>
-		<p>GRATIS bezorging voor bestellingen vanaf €55!*</p>
-		<p>Voorproefjes van Black Friday-deals komen eraan op 28-11-2025*</p>
-		<p>Bespaar met de LEGO® Insiders-prijs*</p>
-		<a href="#">Meer info</a>
-		<button><img src="#" alt="verderknop"></button>
-		<button><img src="#" alt="sluitknop"></button>
-	</div>
-	<nav>
-        <ul>
-			<button aria-hidden="true"><img src="#" alt="hamburger menu"></button>
-            <li><a href="index.html"><img src="images/legologo.svg" alt="Lego logo met link naar de homepagina"></a></li>
-            <button><img src="#" alt="zoekicoon"></button>
-            <li><a href="#"><img src="" alt="account"></a></li>
-            <li><a href="#"><img src="" alt="favoriete lego sets"></a></li>
-			<li><a href="#"><img src="" alt="winkelwagen"></a></li>			
-        </ul>
-    </nav>
+		<a href="#main" class="skiplink">Skip navigatie en ga naar pagina inhoud</a> <!-- ik heb de info over een skiplink gehaald van: https://www.w3schools.com/accessibility/accessibility_skip_links.php#:~:text=The%20skip%20link%20is%20a,to%20it%20with%20an%20anchor.&text=That's%20it.-->
+		<div class="informatietab">
+			<button class="btnterug"><img src="images/icons/knopnaarlinks.svg" alt="Tekst terug bekijken door op het pijltje naar links te klikken"></button>
+			<p class="headertekst1">GRATIS bezorging voor bestellingen vanaf €55!*<a href="#"> Meer info</a></p>
+			<p class="headertekst2 hidden">Voorproefjes van Black Friday-deals komen eraan op 28-11-2025*<a href="#"> Meer info</a></p>
+			<p class="headertekst3 hidden">Bespaar met de LEGO® Insiders-prijs*<a href="#"> Meer info</a></p>
+			<button class="btnverder"><img src="images/icons/knopnaarrechts.svg" alt="Tekst verder bekijken door op het pijltje naar rechts te klikken"></button>
+			<button class="sluiten"><img src="images/icons/kruisje.svg" alt="sluit dit veld"></button>
+		</div>
+		<nav>
+        	<ul>
+				<li><button id="hamburgermenu" aria-hidden="true"><img src="images/icons/hamburgermenu.svg" alt="hamburger menu"></button></li><!--https://www.svgrepo.com/vectors/burger-menu/-->
+            	<li><a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a></li>
+            	<li><button><img src="images/icons/zoekicoon.svg" alt="zoekicoon"></button></li>
+            	<li><a href="#"><img src="/images/icons/accountprofiellogo.svg" alt="account"></a></li>
+            	<li><a href="#"><img src="images/icons/hartje.svg" alt="favoriete LEGO sets"></a></li>
+				<li><a href="#"><img src="images/icons/winkelmand.svg" alt="winkelwagen"></a></li>			
+        	</ul>
+    	</nav>
+
+		<div>
+			<a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a>
+    		<button><img src="images/icons/kruisje.svg" alt="sluit hamburgermenu"></button>
+    		<ul>
+    			<li><button>
+					<h2>Winkelen</h2>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar winkel categorieën toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<h2>Ontdekken</h2>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar onderwerpen om te ontdekken toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<h2>Help</h2>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar hulp onderdelen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><a href="#"><h2>Black Friday</h2></a></li>
+				<li><a href="#">Account</a></li>
+				<li><a href="#">629 punten</a></li>
+				<li><a href="#">Mijn verlanglijst</a></li>
+				<li><a href="#">Mijn tas</a></li>
+    		</ul>
+			<div>
+				<img src="images/icons/locatiepin.svg" alt="locatiepin">
+				<a href="#">Nederland</a>
+				<p>Speel games, bekijk video's en meer!</p>
+				<a href="#">Speelplek<img src="images/icons/pijlnaarrechts.svg" alt="pijl naar rechts"></a>
+			</div>
+			<div>
+
+			</div>
+		</div>
 	</header>
 
 	<main id="main">
-		<section>
-			<img src="#" alt="lego insiders promotie foto, man bouwt LEGO® Icons Tropisch aquarium set">
-			<ul>
-				<li><p>Nieuw</p></li>
-				<li><p>Exclusief</p></li>
-			</ul>
-			<h1>Vervroegde toegang voor leden</h1>
-			<p>Bouw als allereerste de LEGO® Icons Tropisch aquarium-set</p>
-			<a>Nu winkelen<img src="#" alt="Ga naar LEGO® Icons Tropisch aquarium-set pagina"></a>
-			<a>Meer info<img src="#" alt="Meer info over LEGO® insiders pagina"></a>
+		<section class="hoofdsectie">
+			<h1 class="visually-hidden">Lego Homepagina</h1>
+			<img src="images/blackfridaylogo.jpg" alt="blackfriday logo met een LEGO blokje erin">
+			<h2>Black Friday-uitverkoop begint op 28-11-2025</h2>
+			<p>Dit is het perfecte moment om een voorproefje te zien van aanstaande aanbiedingen, om kerstcadeaus te plannen en om je verlanglijst uit te breiden.</p>
+			<a href="#">Aanbiedingen<img src="images/icons/pijlnaarrechts.svg" alt="Pijl naar rechts in het zwart"></a>
+			<a href="#">Bouw een verlanglijst<img src="images/icons/pijlnaarrechts.svg" alt="Pijl naar rechts in het wit"></a>
 		</section>
 
 		<section>
 			<nav>
-				<button aria-expanded="true" aria-controls="Nieuwcontent">Nieuw</button>
-				<button aria-expanded="false" aria-controls="Themascontent">Thema's</button>
+				<button id="nieuwbutton" aria-expanded="true" aria-controls="Nieuwcontent">Nieuw</button>
+				<button id="themasbutton" aria-expanded="false" aria-controls="Themascontent">Thema's</button>
 			</nav>
 			<section id="sectie1" class="Nieuw" aria-live="polite" role="region">
 				<ul>
-					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Aanbiedingen<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Best verkocht<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Binnenkort uit handel<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Adventkalenders<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Winkel voor kerstmis<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Geweldige beloningen<img src="#" alt="Gouden LEGO blokje"></a></li>
-				</ul>
-				<ul>
-					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-				</ul>
-				<ul>
-					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Alle nieuwe sets<img src="images/vrouwkijktindoos.jpg" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
+					<li><a href="#">Exclusieve items<img src="images/goudblokje.jpg" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Aanbiedingen<img src="images/procentblokje.jpg" alt="LEGO steentje met procent teken erop"></a></li>
+					<li><a href="#">Alle sets<img src="images/legosets.jpg" alt="Verschillende LEGO dozen op elkaar gestapeld"></a></li>
+					<li><a href="#">Cadeaus voor kinderen<img src="images/legouil.jpg" alt="LEGO uil"></a></li>
+					<li><a href="#">Cadeaus voor volwassenen<img src="images/bonsaiboompje.jpg" alt="een LEGO bonsaiboompje"></a></li>
+					<li><a href="#">Winkel voor kerstmis<img src="images/rendierpakpoppetje.jpg" alt="LEGO Poppetje met rendierpakje"></a></li>
+					<li><a href="#">Geweldige beloningen<img src="images/legoinsiderslogo.jpg" alt="LEGO Blokje met het lego insiders logo erop"></a></li>
 				</ul>
 			</section>    
 
-			<section id="sectie2" class="Themas" aria-live="polite" role="region">
+			<section id="sectie2" class="Themas hidden" aria-live="polite" role="region">
 				<ul>
-					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Aanbiedingen<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Best verkocht<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Binnenkort uit handel<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Adventkalenders<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Winkel voor kerstmis<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Geweldige beloningen<img src="#" alt="Gouden LEGO blokje"></a></li>
-				</ul>
-				<ul>
-					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-				</ul>
-				<ul>
-					<li><a href="#">Alle nieuwe sets<img src="#" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Exclusieve items<img src="#" alt="Gouden LEGO blokje"></a></li>
+					<li><a href="#">Wicked<img src="images/legowicked.jpg" alt="LEGO Wicked Elphaba en Glinda"></a></li>
+					<li><a href="#">Botanicals<img src="images/legocactus.jpg" alt="LEGO Botanicals cactus plantje"></a></li>
+					<li><a href="#">Speed Champions<img src="images/legomercedes.jpg" alt="LEGO Speed Champions mercedes auto"></a></li>
+					<li><a href="#">Harry Potter™<img src="images/legoharrypotter.jpg" alt="LEGO Harry Potter met een koffer in één hand en hedwig op de andere hand"></a></li>
+					<li><a href="#">Icons<img src="images/legoastronaut.jpg" alt="LEGO astronaut op een schip"></a></li>
+					<li><a href="#">Disney<img src="images/legoprinses.jpg" alt="LEGO assepoester met muis op haar hand"></a></li>
+					<li><a href="#">Marvel<img src="images/legospiderman.jpg" alt="LEGO Spider-men die slingert aan zijn spider-web"></a></li>
+					<li><a href="#">Technic<img src="images/legoonderzeeer.jpg" alt="Een LEGO onderzeeër"></a></li>
 				</ul>
 			</section>    
 		</section>
@@ -158,15 +148,15 @@
 						<h3>Feestelijke kersttrein</h3>
 						<button aria-label="Favoriet toevoegen"></button>
 						<p>Nieuw</p>
-						<img src="#" alt="Feestelijke Kersttrein set">
-						<img src="#" alt="Taart met kaarsjes">
+						<img src="images/legokersttrein.png" alt="Feestelijke Kersttrein set">
+						<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 						<p>18+</p>
-						<img src="#" alt="Aantal blokjes">
+						<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
 						<p>956</p>
-						<img src="#" alt="Review sterren">
+						<img src="images/icons/ster.svg" alt="Review sterren">
 						<p>3.8</p>
 						<p>€119,99</p>
-						<button aria-label="Product in winkelwagen stoppen">In Tas</button>
+						<button aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png">In Tas</button>
 					</li>
 
 					<li>
