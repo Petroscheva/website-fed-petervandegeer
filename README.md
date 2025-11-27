@@ -69,7 +69,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Uit de WCAG komen de volgende punten naar boven:
   Goed:
   Er is heel goed rekening gehouden met appearance, control, mobile, media, images, list, headings, content en keyboard.
-
+  
   Minder goed:
   Er zijn zo ver ik zie geen media queries gebruikt. Hierdoor zijn er ook geen animaties, 
   die de prefers-reduced-motion media query naleven.
@@ -115,26 +115,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Het was lastig om te bedenken hoe ik een uitklapbaar menu kon coderen met buttons voor de footer.
+  Het was lastig om te bepalen of een stuk tekst in de footer een h2 of h3 is.
+  Het maken van de breakdown schets ging goed.
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Ik wil graag feedback krijgen op mijn breakdownschetsen.
+  Verder wil ik graag weten hoe ik mijn footer goed kan uitwerken. Uitklap menu door een button.
+  Ik wil graag weten hoe ik ervoor kan zorgen dat als ik op een button klik dat er dan een ul aangezet wordt en een andere ul uitgezet wordt.
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - WCAG bevindingen specifieker maken
+  - In de technieken in gaan voor de toegankelijkheid die LEGO gebruikt. Hoe is het gemaakt? Hoe kan ik dit namaken?
+  - h1 visually hidden maken
+  - Hamburger menu uit de nav halen
+  - Summary details gebruiken voor de buttons van de footer
+  - uitklap menus uitwerken van het hamburgermenu
+  - Skiplink maken voor mensen met e-readers
 
 </details>
 
@@ -148,17 +149,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Het lukt mij niet om voor de modal een blur toe te voegen, waardoor ik de rest van de pagina kan zien.
+  Het lukt mij niet om zowel de informatietab en de nav bovenaan de pagina te houden. 
+  Ik wil alles responsive maken.
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Hoe kan ik mijn hamburger menu uitwerken?
+  Hoe kan ik ervoor zorgen dat mijn modal een blur krijgt?
+  Hoe kan ik het beste alle veranderende afbeeldingen in mijn HTML zetten?
 
 
   ### Verslag van meeting
