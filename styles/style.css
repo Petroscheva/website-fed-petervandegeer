@@ -11,8 +11,11 @@ a{
     text-decoration: none;
 }
 
-
-
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 /*********************/
 /* CUSTOM PROPERTIES */
@@ -22,31 +25,7 @@ a{
 	--color-background:#eee;
 }
 
-@media (min-width:38em) {
-  nav {
-    position:static;
-    translate:unset;
-    padding:0;
-    background:none;
-  }
-  
-  #hamburgermenu{
-    display:none;
-  }
-  
-  header nav ul {
-    display:flex;
-    gap:1em;
-  }
-  
-  header nav a {
-    flex-direction:column;
-  }
-  
-  header a {
-    flex-direction:column;
-  }
-}
+
 
 
 
@@ -70,8 +49,7 @@ a{
 }
 
 dialog::backdrop {
-	background-color:#ffffff;
-	backdrop-filter:blur(.5em);
+	backdrop-filter:blur(1em);
 }
 
 html:has(header dialog[open]) {
@@ -100,10 +78,10 @@ html:has(header dialog[open]) {
   flex-direction: row;
   align-items: center;
   justify-content: space-between; 
-  position: sticky;
   list-style-type: none;
   flex-basis: auto;
   background-color:white;
+  box-sizing: border-box;
   text-decoration:none;
   left:0;
   right:0;
@@ -114,7 +92,41 @@ html:has(header dialog[open]) {
   z-index: 1000;
 }
 
-header nav {
+.informatietab p{
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.informatietab .btnterug {
+  margin-right: 1em;
+  margin-left: auto;
+}
+
+
+.informatietab .btnverder {
+  /* gewoon normaal in de flow */
+  margin-right: auto;
+  margin-left: 1em;
+}
+
+.informatietab .sluiten {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.informatietab img{
+  width: 2em;
+}
+
+.informatietab button img {
+  pointer-events: none;
+}
+
+#hamburgermenu{
+  order:-1;
+}
+
+.hoofdnavigatie {
   display:flex;
   flex-direction: row;
   align-items: center;
@@ -126,10 +138,11 @@ header nav {
   right:0;
   top:0;
   bottom:0;
-  width: 100%;
+  width: 100%;  
 }
 
-header nav ul{
+
+.hoofdnavigatie ul{
   display:flex;
   flex-direction: row;
   justify-content: space-around;
@@ -139,22 +152,59 @@ header nav ul{
   padding: 0.5em;
 }
 
-header nav img{
+.hoofdnavigatie img{
   width: 3em;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/*https://www.a11yproject.com/posts/how-to-hide-content/*/
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+
+.hoofdnavigatie a:last-of-type {
+  flex-direction:column;
 }
+
+#naarrechts{
+  margin-left: auto;
+}
+
+.hamburgermenucontent{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.hamburgermenucontent img{
+  width:2em;
+}
+
+.hamburgermenucontent.toonMenu {
+  transform: translateX(0);
+}
+
+.winkelenmenu {
+  position: absolute;
+  left: 0;
+  right: 10%;
+  top: 8em;
+  bottom: 0;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.winkelenmenu img{
+  width:2em;
+}
+
+.winkelenmenu.toonMenu {
+  transform: translateX(0);
+}
+
 
 .hoofdsectie img{
   width:100%;
@@ -179,10 +229,93 @@ details[open] summary:after {
   display: none;
 }
 
-.informatietab img{
-  width: 2em;
+/*https://www.a11yproject.com/posts/how-to-hide-content/*/
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
-.informatietab button img {
-  pointer-events: none;
+@media (min-width:38em) {
+  .hoofdnavigatie {
+    position:static;
+    translate:unset;
+    padding:0;
+    background:none;
+  }
+  
+  header nav ul {
+    display:flex;
+    gap:1em;
+  }
+  
+  header nav a {
+    flex-direction:column;
+  }
+  
+  header a {
+    flex-direction:column;
+  }
+  
+  .hamburgermenucontent{
+    position:absolute;
+    left:0;
+    right:10%;
+    top:8em;
+    bottom:0;
+    transform: translateX(-100%);
+    transition: transform .3s;
+  }
+
+  .hamburgermenucontent::backdrop {
+  backdrop-filter:blur(1em);
+  }
+
+  .hamburgermenucontent ul {
+    display:flex;
+    gap:1em;
+  }
+  
+  .hamburgermenucontent button{
+    flex-direction:column;
+    border:none;
+  }
+  
+  .hamburgermenucontent a {
+    /* JOUW CODE HIER - stap 9 */
+    flex-direction:column;
+  }
+
+
+}
+
+@media (min-width:57em) {
+  .hoofdnavigatie a:last-of-type {
+    flex-direction:row;
+  }
+
+  #hamburgermenu{
+    display:none;
+  }
+
+  .hoofdnavigatie {
+    background-color: #FFCF02;
+  }
+
+  .hamburgermenucontent {
+    display: none;
+  }
+
+  
+}
+
+
+@media (max-width: 57em) {
+  .winkelenmenu {
+    display: none;
+  }
 }

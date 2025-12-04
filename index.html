@@ -33,8 +33,8 @@
 				<p>Speel games, bekijk video's en meer!</p>
 				<a href="#">Beginnen met spelen</a>
 			</section>
+			<p>We willen u laten weten dat we cookies op uw apparaat plaatsen die uw keuzes op LEGO.com onthouden, bijvoorbeeld het land waar u woont, uw hoogste score en uw LEGO-account. We plaatsen ook cookies die ons helpen de website te laten werken. Bekijk voor meer informatie ons <a href="#">Cookiebeleid</a> en ons Privaxybeleid.</p>
 		</form>
-		<p>We willen u laten weten dat we cookies op uw apparaat plaatsen die uw keuzes op LEGO.com onthouden, bijvoorbeeld het land waar u woont, uw hoogste score en uw LEGO-account. We plaatsen ook cookies die ons helpen de website te laten werken. Bekijk voor meer informatie ons <a href="#">Cookiebeleid</a> en ons Privaxybeleid.</p>
 	</dialog>
 
 	<header>
@@ -47,20 +47,24 @@
 			<button class="btnverder"><img src="images/icons/knopnaarrechts.svg" alt="Tekst verder bekijken door op het pijltje naar rechts te klikken"></button>
 			<button class="sluiten"><img src="images/icons/kruisje.svg" alt="sluit dit veld"></button>
 		</div>
-		<nav>
+		<nav class="hoofdnavigatie">
         	<ul>
 				<li><button id="hamburgermenu" aria-hidden="true"><img src="images/icons/hamburgermenu.svg" alt="hamburger menu"></button></li><!--https://www.svgrepo.com/vectors/burger-menu/-->
             	<li><a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a></li>
-            	<li><button><img src="images/icons/zoekicoon.svg" alt="zoekicoon"></button></li>
+				<li><button class="winkelenknop hoofdnavigatieonderdeel">Winkelen</button></li>
+				<li><button class="ontdekkenknop hoofdnavigatieonderdeel">Ontdekken</button></li>
+				<li><button class="helpknop hoofdnavigatieonderdeel">Help</button></li>
+				<li><a href="#" class="blackfridayknop hoofdnavigatieonderdeel"><h2>Black Friday</h2></a></li>
+            	<li><button id="naarrechts"><img src="images/icons/zoekicoon.svg" alt="zoekicoon"></button></li>
             	<li><a href="#"><img src="/images/icons/accountprofiellogo.svg" alt="account"></a></li>
             	<li><a href="#"><img src="images/icons/hartje.svg" alt="favoriete LEGO sets"></a></li>
-				<li><a href="#"><img src="images/icons/winkelmand.svg" alt="winkelwagen"></a></li>			
+				<li><a href="#">1<img src="images/icons/winkelmand.svg" alt="winkelwagen"></a></li>			
         	</ul>
     	</nav>
 
-		<div>
+		<nav class="hamburgermenucontent">
 			<a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a>
-    		<button><img src="images/icons/kruisje.svg" alt="sluit hamburgermenu"></button>
+    		<button class="menusluitknop"aria-hidden="true"><img src="images/icons/kruisje.svg" alt="sluit hamburgermenu"></button>
     		<ul>
     			<li><button>
 					<h2>Winkelen</h2>
@@ -86,10 +90,58 @@
 				<p>Speel games, bekijk video's en meer!</p>
 				<a href="#">Speelplek<img src="images/icons/pijlnaarrechts.svg" alt="pijl naar rechts"></a>
 			</div>
-			<div>
-
-			</div>
-		</div>
+		</nav>
+		<nav class="winkelenmenu">
+    		<button class="winkelenmenusluitknop"aria-hidden="true"><img src="images/icons/kruisje.svg" alt="sluit menu"></button>
+			<ul>
+				<li><a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a></li>
+				<li><button class="winkelenknop">Winkelen</button></li>
+				<li><button class="ontdekkenknop">Ontdekken</button></li>
+				<li><button class="helpknop">Help</button></li>
+				<li><a href="#" class="blackfriday"><h2>Black Friday</h2></a></li>
+			</ul>
+    		<ul>
+    			<li><button>
+					<p>Sets per thema</p>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar sets per thema toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<p>Leeftijden</p>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar leeftijden toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<p>Prijsklassen</p>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar prijsklassen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<p>Winkelen voor gelegenheden</p>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar winkelen voor gelegenheden toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<p>LEGO® producten</p>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar LEGO® producten toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<p>LEGO® huisinrichting</p>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar LEGO® huisinrichting toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<p>Belangstelling</p>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar Belangstelling toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><button>
+					<p>Stenen en onderdelen</p>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar stenen en onderdelen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				</button></li>
+				<li><a href="#"><p>Exclusieve items</p></a></li>
+				<li><a href="#"><p>Nieuw</p></a></li>
+				<li><a href="#"><p>Best verkocht</p></a></li>
+				<li><a href="#"><p>Aanbiedingen en uitverkoop</p></a></li>
+				<li><a href="#"><p>Cadeaukaarten</p></a></li>
+				<li><a href="#"><p>Binnenkort</p></a></li>
+				<li><a href="#"><p>Binnenkort uit handel</p></a></li>
+    		</ul>
+		</nav>
 	</header>
 
 	<main id="main">

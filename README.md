@@ -68,8 +68,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Uit de WCAG komen de volgende punten naar boven:
   Goed:
-  Er is heel goed rekening gehouden met appearance, control, mobile, media, images, list, headings, content en keyboard.
-  
+  Tekst en achtergrond gebruiken voldoende kleurcontrast, dat maakt tekst leesbaar voor mensen met slechte ogen of kleurenblindheid.
+  Tekst is schaalbaar / vergrootbaar zonder verlies van functionaliteit of inhoud.
+  Alle interactieve elementen (knoppen, links, formulieren, menu’s) zijn correct gemarkeerd en bedienbaar, bijvoorbeeld echte <button> of <a> elementen gebruiken.
+  Media speelt niet automatisch af zonder controle, de gebruiker kan zelf kiezen of een video start.
+  Ondertiteling bij video’s, wanneer visuele info belangrijk is, zodat slechthorenden of blinden de inhoud kunnen meekrijgen.
+  Decoratieve afbeeldingen worden correct gemarkeerd als decoratief, zodat alleen relevante info voorgelezen wordt voor mensen met een e-reader.
+  Teksten eenvoudig en duidelijk geschreven: korte zinnen, duidelijke taal, eenvoudig woordgebruik.
+
   Minder goed:
   Er zijn zo ver ik zie geen media queries gebruikt. Hierdoor zijn er ook geen animaties, 
   die de prefers-reduced-motion media query naleven.
@@ -90,13 +96,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Mijn homepagina blijft alle onderdelen behouden,want content verschilt genoeg van elkaar.
 
   Adultswelcomescherm breakdown mobiele versie, hier ga ik een aantal onderdelen verwijderen: 
-  <img src="images/onderdelenweghalenadultswelcomescherm.jpg" width="375px" alt="weggestreepte onderdelen van het adultswelcome scherm in het rood, de rest wordt behouden">
+  <img src="readme-images/onderdelenweghalenadultswelcomescherm.jpg" width="375px" alt="weggestreepte onderdelen van het adultswelcome scherm in het rood, de rest wordt behouden">
 
   Adultswelcome pagina breakdownschets mobiele versie:
-  <img src="images//breakdownschetslegoadultswelcomepagina.jpg" width="375px" alt="breakdown van de hele adults welcome pagina">
+  <img src="readme-images//breakdownschetslegoadultswelcomepagina.jpg" width="375px" alt="breakdown van de hele adults welcome pagina">
 
   homepagina breakdownschets mobiele versie:
-  <img src="images/breakdownschetslegohomepagina.jpg" width="375px" alt="breakdown van de hele homepagina">
+  <img src="readme-images/breakdownschetslegohomepagina.jpg" width="375px" alt="breakdown van de hele homepagina">
 
   <!--### dynamisch deel (article): 
   <img src="images/iphonebreakdownarticle.png" width="375px" alt="breakdown van eerste gedeelte van kerstcadeau's pagina"> -->
@@ -162,10 +168,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Probeer alles stap voor stap te doen
+  - Probeer meerdere menu's te maken
+  - Beginnen aan CSS
 
 </details>
 
@@ -179,8 +184,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-
+  
+Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 </details>
 
 
@@ -256,6 +261,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. CeraPro fonts van de lego website, gedownload van: https://en.bestfonts.pro/font/cera-pro
   2. foto's en video van de lego site: https://www.lego.com/nl-nl/categories/adults-welcome , https://www.lego.com/nl-nl
-  3. ...
+  3. media query in js om de nav te maken op verschillende groottes via: https://www.w3schools.com/howto/howto_js_media_queries.asp
 
 </details>
