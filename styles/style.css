@@ -7,8 +7,8 @@
   margin:0;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 button {
@@ -17,23 +17,114 @@ button {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
+/*https://www.a11yproject.com/posts/how-to-hide-content/*/
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text:black;
+	--witte-achtergrond:white;
+  --zwarte-achtergrond:black;
+  --witte-text:white;
+  --blauwe-achtergrond:#6ecdcc;
+  --oranje-achtergrond: orange;
+  --grijze-achtergrond:grey;
+  --modal-blauwe-achtergrond:#005AD2;
+  --modal-gele-achtergrond:#FFCF02;
+
 }
 
+@font-face {
+  font-family: "Cerapro";
+  src: url("../fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display:fallback;
+}
 
+@font-face {
+  font-family: 'Cerapro';
+  src: url('../fonts/CeraPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display:fallback;
+}
 
+@font-face {
+  font-family: 'Cerapro';
+  src: url('../fonts/CeraPro-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display:fallback;
+}
 
+@font-face {
+  font-family: 'Cerapro';
+  src: url('../fonts/CeraPro-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display:fallback;
+}
 
+@font-face {
+  font-family: 'Cerapro';
+  src: url('../fonts/CeraPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display:fallback;
+}
 
+/************/
+/* Algemeen */
+/************/
 
-/*****************/
-/* EIGEN STYLING */
-/*****************/
+body{
+  font-family:'Cerapro', Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: 'Cerapro', Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+h3{
+  font-family: 'Cerapro', Helvetica, sans-serif;
+  font-weight:700;
+}
+
+h4{
+  font-family:'Cerapro', Helvetica, sans-serif;
+  font-weight:700;
+}
+
+p {
+  font-family: 'Cerapro', Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+/*********/
+/* Modal */
+/*********/
 
 
 .modal img {
@@ -41,11 +132,11 @@ button {
 }
 
 .modal section:first-child{
-  background-color:#005AD2;
+  background-color:var(--modal-blauwe-achtergrond);
 }
 
 .modal section:nth-of-type(2){
-  background-color:#FFCF02;
+  background-color:var(--modal-gele-achtergrond);
 }
 
 dialog::backdrop {
@@ -73,6 +164,10 @@ html:has(header dialog[open]) {
   height: auto;
 }
 
+/*****************/
+/* Informatietab */
+/*****************/
+
 .informatietab{
   display:flex;
   flex-direction: row;
@@ -80,7 +175,7 @@ html:has(header dialog[open]) {
   justify-content: space-between; 
   list-style-type: none;
   flex-basis: auto;
-  background-color:white;
+  background-color:var(--witte-achtergrond);
   box-sizing: border-box;
   text-decoration:none;
   left:0;
@@ -102,9 +197,7 @@ html:has(header dialog[open]) {
   margin-left: auto;
 }
 
-
 .informatietab .btnverder {
-  /* gewoon normaal in de flow */
   margin-right: auto;
   margin-left: 1em;
 }
@@ -114,7 +207,7 @@ html:has(header dialog[open]) {
   margin-right: auto;
 }
 
-.informatietab img{
+.informatietab img {
   width: 2em;
 }
 
@@ -122,18 +215,15 @@ html:has(header dialog[open]) {
   pointer-events: none;
 }
 
-#hamburgermenu{
+/****************/
+/* Navigatiebar */
+/****************/
+
+#hamburgermenu {
   order:-1;
 }
 
 .hoofdnavigatie {
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  list-style-type: none;
-  flex-basis: auto;
-  background-color:white;
-  text-decoration:none;
   left:0;
   right:0;
   top:0;
@@ -142,7 +232,7 @@ html:has(header dialog[open]) {
 }
 
 
-.hoofdnavigatie ul{
+.hoofdnavigatie ul {
   display:flex;
   flex-direction: row;
   justify-content: space-around;
@@ -152,7 +242,7 @@ html:has(header dialog[open]) {
   padding: 0.5em;
 }
 
-.hoofdnavigatie img{
+.hoofdnavigatie img {
   width: 3em;
   display: block;
   margin-left: auto;
@@ -163,22 +253,22 @@ html:has(header dialog[open]) {
   flex-direction:column;
 }
 
-#naarrechts{
+#naarrechts {
   margin-left: auto;
 }
 
-.hamburgermenucontent{
+.hamburgermenucontent {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: white;
+  background-color: var(--witte-achtergrond);
   transform: translateX(-100%);
   transition: transform 0.3s;
 }
 
-.hamburgermenucontent img{
+.hamburgermenucontent img {
   width:2em;
 }
 
@@ -192,12 +282,12 @@ html:has(header dialog[open]) {
   right: 10%;
   top: 8em;
   bottom: 0;
-  background-color: white;
+  background-color: var(--witte-achtergrond);
   transform: translateX(-100%);
   transition: transform 0.3s;
 }
 
-.winkelenmenu img{
+.winkelenmenu img {
   width:2em;
 }
 
@@ -205,10 +295,396 @@ html:has(header dialog[open]) {
   transform: translateX(0);
 }
 
+/****************/
+/* Hoofd Sectie */
+/****************/
 
-.hoofdsectie img{
+.hoofdsectie{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr) 5em 5em 4em;
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  background-color: var(--zwarte-achtergrond);
+}
+
+.hoofdsectie img {
+  grid-area: 1 / 1 / 4 / 8; 
   width:100%;
 }
+
+.hoofdsectie h2 {
+  color: var(--witte-text);
+  grid-area: 4 / 1 / 5 / 8;
+  padding-left: 0.5em;
+}
+
+.hoofdsectie p {
+  color: var(--witte-text);
+  grid-area: 5 / 1 / 6 / 8;
+  padding-left: 0.9em;
+}
+
+.hoofdsectielinkjes{
+  grid-area: 6 / 1 / 7 / 8;
+  padding-left: 0.9em;
+}
+
+.hoofdsectielinkjes ul{
+  display:flex;
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  text-decoration:none;
+  gap:0.5em;
+}
+
+.hoofdsectielinkjes ul a  {
+  padding: 0.5em;
+}
+
+.hoofdsectielinkjes ul a:first-of-type{
+  color:var(--witte-text);
+  border: 3px solid var(--witte-achtergrond);
+  border-radius: 30px;
+}
+
+.hoofdsectielinkjes ul a:last-of-type{
+  color:var(--witte-text);
+  border: 3px solid var(--witte-achtergrond);
+  border-radius: 30px;
+}
+
+.hoofdsectie a img{
+  align-self: center;
+  filter:invert(100%); 
+  width: 1em;
+}
+
+.blackfridaylogomedium{
+  display:none;
+}
+
+.blackfridaylogogroot{
+  display:none;
+}
+
+/*******************/
+/* Carousel Sectie */
+/*******************/
+
+
+.carouselmetbuttons {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: grey;
+}
+
+.carouselmetbuttons nav {
+  display: flex;
+}
+
+.carouselmetbuttons nav button{
+  color: var(--witte-text);
+  padding: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.carouselmetbuttons nav button:first-of-type{
+  margin-right: auto
+  margin-left: 1em;
+}
+
+.carouselmetbuttons nav button:last-of-type{
+  margin-right: auto;
+  margin-left: 1em;
+}
+
+.carouselmetbuttons {
+  width: 100%;
+  position: relative;
+  background: var(--grijze-achtergrond);
+}
+
+/*********************************/
+/* Scrollbare horizontale lijst  */
+/*********************************/
+
+.carouselmetbuttons ul {
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+
+  padding: 1em;
+  margin: 0;
+  list-style: none;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.carouselmetbuttons ul::-webkit-scrollbar {
+  display: none;
+}
+
+/*******************/
+/* Gelijke blokken */
+/*******************/
+
+.carouselmetbuttons li {
+  flex-basis:10em;
+  flex-grow:0;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  overflow: hidden;
+  background: var(--witte-achtergrond);
+}
+
+.carouselmetbuttons figure {
+  margin: 0;
+  position: relative;
+}
+
+.carouselmetbuttons img {
+  width: 100%;
+  display: block;
+}
+
+/*****************/
+/* Titel overlay */
+/*****************/
+
+.carouselmetbuttons figcaption {
+  position: absolute;
+  top:0;
+  width: 100%;
+  color: var(--witte-achtergrond);
+  padding: .75em 0.8em;
+}
+
+.carouselmetbuttons li:last-of-type figcaption{
+  color: var(--color-text)
+}
+
+.carouselmetbuttons figcaption h3 {
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+
+/*****************/
+/* Carousel Sets */
+/*****************/
+
+.carouselsets{
+  background: var(--blauwe-achtergrond);
+}
+
+.infobovencarouselsets {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.infobovencarouselsets h2{
+  grid-area: 2 / 1 / 3 / 6;
+  margin-left: 1em;
+}
+
+.infobovencarouselsets h3{
+  grid-area: 4 / 1 / 5 / 5;
+  margin-left: 1em;
+}
+
+.carouselsetsbuttons {
+  grid-area: 4 / 10 / 5 / 12;
+}
+
+.carouselbtnterug img,
+.carouselbtnverder img{
+  align-items: center;
+  width: 1em;
+}
+
+.carouselbtnterug,
+.carouselbtnverder {
+  transform: translateY(-50%);
+  color:var(--zwarte-achtergrond);
+  border: 3px solid var(--zwarte-achtergrond);
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 50%;
+}
+
+.Uitgelicht ul {
+  display: flex;
+  gap: 1em;
+  padding: 0 1em;
+  margin: 0;
+  list-style: none;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.uitgelicht ul::-webkit-scrollbar {
+  display: none;
+}
+
+/******************/
+/* Carousel items */
+/******************/
+
+
+.Uitgelicht li {
+  scroll-snap-align: center;
+  background-color: var(--witte-text);
+}
+
+.favorietenknopenlabel{
+  display: flex;
+  justify-content: space-between;
+}
+
+.uitgelicht li button img{
+  width:1em;
+}
+
+
+.uitgelicht h4 {
+  position: absolute;
+  margin-top: 10em;
+}
+
+
+.specificatiesset{
+  display:flex;
+  flex-direction: row;
+  padding-bottom: 2em;
+}
+
+.specificatiesset img {
+  width: 1em;
+}
+
+.intasknop{
+  background-color: var(--oranje-achtergrond);
+}
+
+.intasknop img{
+  width: 1em;
+}
+
+.gridlegofotos h2{
+  text-align: center;
+  margin-top:1em;
+}
+
+.gridlegofotos p{
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.gridlegofotos ul{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.gridlegofotos li img:first-of-type{
+  width:100%;
+  height:auto;
+  align-self:stretch;
+  object-fit:cover;
+  display:block;
+}
+
+.treinopkast{
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+.deathstaropkast{
+  grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.setsinkast{
+  grid-area: 2 / 1 / 4 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.titanicoptafel{
+  grid-area: 4 / 1 / 5 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.rivendelloptafel{
+  grid-area: 4 / 2 / 5 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.rivendelloptafel button{
+  grid-area: 2 / 1 / 3 / 2;
+  align-self:start;
+  justify-self: end;
+}
+.gridlegofotos li button img{
+  width:1em;
+}
+
+.gridlegofotos li img:first-of-type {
+  grid-column-start:1;
+  grid-column-end:-1;
+  grid-row-start:1;
+}
+
+.gridlegofotos li button{
+  grid-area: 2 / 1 / 3 / 2;
+
+  aspect-ratio:1/1;
+  margin:.5rem;
+}
+
+
+/**********/
+/* Footer */
+/**********/
 
 /*ik heb de info over het verplaatsen van de driehoek van een summary van: https://stackoverflow.com/questions/56758098/how-to-position-detail-marker-to-come-after-summary*/
 details>summary {
@@ -225,22 +701,14 @@ details[open] summary:after {
   content: " ▼";
 }
 
-.hidden {
-  display: none;
+@media (max-width: 599px) {
+  .carouselbtnterug,
+  .carouselbtnverder {
+    display: none;
+  }
 }
 
-/*https://www.a11yproject.com/posts/how-to-hide-content/*/
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-@media (min-width:38em) {
+@media (min-width:600px) {
   .hoofdnavigatie {
     position:static;
     translate:unset;
@@ -280,7 +748,7 @@ details[open] summary:after {
     gap:1em;
   }
   
-  .hamburgermenucontent button{
+  .hamburgermenucontent button {
     flex-direction:column;
     border:none;
   }
@@ -290,15 +758,102 @@ details[open] summary:after {
     flex-direction:column;
   }
 
+  .hoofdsectie{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+  .hoofdsectie img {
+  grid-area: 1 / 1 / 4 / 7;
+  width:100%;
+  }
+
+  .blackfridaylogoklein{
+    display:none;
+  }
+
+  .blackfridaylogomedium {
+    display: block;
+  }
+
+  .hoofdsectie h2 {
+    text-align:right;
+    color: var(--witte-text);
+    grid-area: 1 / 4 / 2 / 7;
+    padding-right: 0.5em;
+    align-items:end;
+  }
+
+  .hoofdsectie p {
+    text-align:right;
+    color: var(--witte-text);
+    grid-area: 2 / 4 / 3 / 7;
+    padding-right: 0.9em;
+    align-items:start;
+  }
+
+  .hoofdsectielinkjes{
+    grid-area: 3 / 4 / 4 / 7;
+  }
+  
+  
+  .hoofdsectielinkjes ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 25px;
+    text-align: center;
+    list-style-type: none;
+    text-decoration:none;
+    gap:3em;
+  }
+
+  .hoofdsectielinkjes ul a  {
+    padding: 1em;
+  }
+
+  .hoofdsectielinkjes ul a:first-of-type{
+    grid-area: 1 / 1 / 2 / 2;
+    color:var(--witte-text);
+    border: 3px solid var(--witte-achtergrond);
+    border-radius: 30px;
+    margin-left:auto;
+  }
+
+  .hoofdsectielinkjes ul a:last-of-type{
+    grid-area: 2 / 1 / 3 / 2;
+    color:var(--witte-text);
+    border: 3px solid var(--witte-achtergrond);
+    border-radius: 30px;
+  }
+
+  .hoofdsectie a img{
+    align-items: center;
+    filter:invert(100%); 
+    width: 1em;
+  }
+
+  .Uitgelicht ul {
+    overflow-x: hidden; 
+  }
+
+  .Uitgelicht li {
+    flex: 0 0 50%; 
+  }
+
 
 }
 
-@media (min-width:57em) {
+@media (min-width:900px) {
   .hoofdnavigatie a:last-of-type {
     flex-direction:row;
   }
 
-  #hamburgermenu{
+  #hamburgermenu {
     display:none;
   }
 
@@ -310,12 +865,204 @@ details[open] summary:after {
     display: none;
   }
 
+  .hoofdnavigatieonderdeel {
+    display: block; 
+  }
+
+  .hoofdsectie{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  }
+
+  .hoofdsectie img {
+  grid-area: 1 / 1 / 4 / 8; 
+  width:100%;
+  }
+
+  .blackfridaylogoklein {
+    display: none;
+  }
+
+  .blackfridaylogomedium {
+    display: none;
+  }
+
+  .blackfridaylogogroot {
+    display: block;
+  }
+
+  .hoofdsectie h2 {
+    text-align:right;
+    color: var(--witte-text);
+    grid-area: 1 / 4 / 4 / 8;
+    padding-right: 0.5em;
+    align-items:end;
+    margin-top: 1em;
+  }
+
+  .hoofdsectie p {
+    text-align:right;
+    color: var(--witte-text);
+    grid-area: 2 / 4 / 4 / 8;
+    padding-right: 0.9em;
+    align-items:start;
+  }
+
+  .hoofdsectielinkjes{
+    grid-area: 3 / 4 / 6 / 8;
+  }
   
+  
+  .hoofdsectielinkjes ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 25px;
+    text-align: center;
+    list-style-type: none;
+    text-decoration:none;
+    gap:3em;
+  }
+
+  .hoofdsectielinkjes ul a  {
+    padding: 1em;
+  }
+
+  .hoofdsectielinkjes ul a:first-of-type{
+    grid-area: 1 / 1 / 2 / 2;
+    color:var(--witte-text);
+    border: 3px solid var(--witte-achtergrond);
+    border-radius: 30px;
+    margin-left:auto;
+  }
+
+  .hoofdsectielinkjes ul a:last-of-type{
+    grid-area: 2 / 1 / 3 / 2;
+    color:var(--witte-text);
+    border: 3px solid var(--witte-achtergrond);
+    border-radius: 30px;
+  }
+
+  .hoofdsectie a img{
+    align-items: center;
+    filter:invert(100%); 
+    width: 1em;
+  }
+
+  .Uitgelicht li {
+    flex: 0 0 33.33%;
+  }
+
+  .Uitgelicht ul {
+    overflow-x: hidden;
+  }
+
 }
 
 
-@media (max-width: 57em) {
+@media (max-width: 900px) {
   .winkelenmenu {
     display: none;
   }
+
+  .hoofdnavigatieonderdeel {
+    display: none;
+  }
 }
+
+@media (min-width:960px) {
+
+  .hoofdsectie{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  }
+
+  .hoofdsectie img {
+  grid-area: 1 / 1 / 6 / 8; 
+  width:100%;
+  }
+
+  .blackfridaylogoklein {
+    display: none;
+  }
+
+  .blackfridaylogomedium {
+    display: none;
+  }
+
+  .blackfridaylogogroot {
+    display: block;
+  }
+
+  .hoofdsectie h2 {
+    text-align:right;
+    color: var(--witte-text);
+    grid-area: 1 / 4 / 4 / 8;
+    padding-right: 0.5em;
+    align-items:end;
+    margin-top: 1em;
+  }
+
+  .hoofdsectie p {
+    text-align:right;
+    color: var(--witte-text);
+    grid-area: 2 / 4 / 4 / 8;
+    padding-right: 0.9em;
+    align-items:start;
+  }
+
+  .hoofdsectielinkjes{
+    grid-area: 3 / 4 / 6 / 8;
+  }
+  
+
+  .hoofdsectielinkjes ul{
+  display:flex;
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  text-decoration:none;
+  gap:0.5em;
+  }
+
+
+  .hoofdsectielinkjes ul a:first-of-type{
+    color:var(--witte-text);
+    border: 3px solid var(--witte-achtergrond);
+    border-radius: 30px;
+  }
+
+  .hoofdsectielinkjes ul a:last-of-type{
+    color:var(--witte-text);
+    border: 3px solid var(--witte-achtergrond);
+    border-radius: 30px;
+  }
+
+  .hoofdsectie a img{
+    align-self: center;
+    filter:invert(100%); 
+    width: 1em;
+  }
+
+  .Uitgelicht li {
+    flex: 0 0 25%; 
+  }
+
+  .Uitgelicht ul {
+    overflow-x: hidden;
+  }
+
+}
+
+@media (prefers-color-scheme:dark) {   
+  svg {     fill:white;   } 
+
+} 
+

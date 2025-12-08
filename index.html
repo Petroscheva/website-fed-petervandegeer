@@ -147,96 +147,396 @@
 	<main id="main">
 		<section class="hoofdsectie">
 			<h1 class="visually-hidden">Lego Homepagina</h1>
-			<img src="images/blackfridaylogo.jpg" alt="blackfriday logo met een LEGO blokje erin">
+			<img class="blackfridaylogoklein" src="images/blackfridaylogo.jpg" alt="blackfriday logo met een LEGO blokje erin">
+			<img class="blackfridaylogomedium" src="images/blackfridaylogomedium.jpg" alt="blackfriday logo voor een medium scherm">
+			<img class="blackfridaylogogroot" src="images/blackfridaylogogroot.jpg" alt="blackfriday logo voor een groot scherm">
 			<h2>Black Friday-uitverkoop begint op 28-11-2025</h2>
 			<p>Dit is het perfecte moment om een voorproefje te zien van aanstaande aanbiedingen, om kerstcadeaus te plannen en om je verlanglijst uit te breiden.</p>
-			<a href="#">Aanbiedingen<img src="images/icons/pijlnaarrechts.svg" alt="Pijl naar rechts in het zwart"></a>
-			<a href="#">Bouw een verlanglijst<img src="images/icons/pijlnaarrechts.svg" alt="Pijl naar rechts in het wit"></a>
+			<div class="hoofdsectielinkjes">
+				<ul>
+					<li><a href="#">Aanbiedingen<img src="images/icons/knopnaarrechts.svg" alt="Pijl naar rechts"></a></li>
+					<li><a href="#">Bouw een verlanglijst<img src="images/icons/knopnaarrechts.svg" alt="Pijl naar rechts"></a></li>
+				</ul>
+			</div>
 		</section>
 
-		<section>
-			<nav>
+		<section class="carouselmetbuttons" aria-labelledby="carousel van verschillende categorieën">
+			<h2 class="visually-hidden">Categorieën carousel</h2>
+			<nav aria-label="Categorieën">
 				<button id="nieuwbutton" aria-expanded="true" aria-controls="Nieuwcontent">Nieuw</button>
 				<button id="themasbutton" aria-expanded="false" aria-controls="Themascontent">Thema's</button>
 			</nav>
-			<section id="sectie1" class="Nieuw" aria-live="polite" role="region">
+			<section id="carouselsectie1" class="Nieuw" aria-label="Nieuwe items">
 				<ul>
-					<li><a href="#">Alle nieuwe sets<img src="images/vrouwkijktindoos.jpg" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets"></a></li>
-					<li><a href="#">Exclusieve items<img src="images/goudblokje.jpg" alt="Gouden LEGO blokje"></a></li>
-					<li><a href="#">Aanbiedingen<img src="images/procentblokje.jpg" alt="LEGO steentje met procent teken erop"></a></li>
-					<li><a href="#">Alle sets<img src="images/legosets.jpg" alt="Verschillende LEGO dozen op elkaar gestapeld"></a></li>
-					<li><a href="#">Cadeaus voor kinderen<img src="images/legouil.jpg" alt="LEGO uil"></a></li>
-					<li><a href="#">Cadeaus voor volwassenen<img src="images/bonsaiboompje.jpg" alt="een LEGO bonsaiboompje"></a></li>
-					<li><a href="#">Winkel voor kerstmis<img src="images/rendierpakpoppetje.jpg" alt="LEGO Poppetje met rendierpakje"></a></li>
-					<li><a href="#">Geweldige beloningen<img src="images/legoinsiderslogo.jpg" alt="LEGO Blokje met het lego insiders logo erop"></a></li>
-				</ul>
-			</section>    
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/vrouwkijktindoos.jpg" alt="foto van LEGO poppetje die een doos opent met alle nieuwe sets" />
+							<figcaption><h3>Alle nieuwe sets</h3></figcaption>
+						</figure>
+						</a>
+					</li>
 
-			<section id="sectie2" class="Themas hidden" aria-live="polite" role="region">
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/goudblokje.jpg" alt="Gouden LEGO blokje" />
+							<figcaption><h3>Exclusieve items</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/procentblokje.jpg" alt="LEGO steentje met procent teken erop" />
+							<figcaption><h3>Aanbiedingen</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legosets.jpg" alt="Verschillende LEGO dozen op elkaar gestapeld" />
+							<figcaption><h3>Alle sets</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legouil.jpg" alt="LEGO uil" />
+							<figcaption><h3>Cadeaus voor kinderen</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/bonsaiboompje.jpg" alt="een LEGO bonsaiboompje" />
+							<figcaption><h3>Cadeaus voor volwassenen</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/rendierpakpoppetje.jpg" alt="LEGO Poppetje met rendierpakje" />
+							<figcaption><h3>Winkel voor kerstmis</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legoinsiderslogo.jpg" alt="LEGO Blokje met het lego insiders logo erop" />
+							<figcaption><h3>Geweldige beloningen</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+				</ul>
+			</section> 
+
+			<section id="carouselsectie2" class="Themas hidden" aria-label="Thema items">
 				<ul>
-					<li><a href="#">Wicked<img src="images/legowicked.jpg" alt="LEGO Wicked Elphaba en Glinda"></a></li>
-					<li><a href="#">Botanicals<img src="images/legocactus.jpg" alt="LEGO Botanicals cactus plantje"></a></li>
-					<li><a href="#">Speed Champions<img src="images/legomercedes.jpg" alt="LEGO Speed Champions mercedes auto"></a></li>
-					<li><a href="#">Harry Potter™<img src="images/legoharrypotter.jpg" alt="LEGO Harry Potter met een koffer in één hand en hedwig op de andere hand"></a></li>
-					<li><a href="#">Icons<img src="images/legoastronaut.jpg" alt="LEGO astronaut op een schip"></a></li>
-					<li><a href="#">Disney<img src="images/legoprinses.jpg" alt="LEGO assepoester met muis op haar hand"></a></li>
-					<li><a href="#">Marvel<img src="images/legospiderman.jpg" alt="LEGO Spider-men die slingert aan zijn spider-web"></a></li>
-					<li><a href="#">Technic<img src="images/legoonderzeeer.jpg" alt="Een LEGO onderzeeër"></a></li>
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legowicked.jpg" alt="LEGO Wicked Elphaba en Glinda" />
+							<figcaption><h3>Wicked</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legocactus.jpg" alt="LEGO Botanicals cactus plantje" />
+							<figcaption><h3>Botanicals</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legomercedes.jpg" alt="LEGO Speed Champions mercedes auto" />
+							<figcaption><h3>Speed Champions</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legoharrypotter.jpg" alt="LEGO Harry Potter met een koffer in één hand en hedwig op de andere hand" />
+							<figcaption><h3>Harry Potter™</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legoastronaut.jpg" alt="LEGO astronaut op een schip" />
+							<figcaption><h3>Icons</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legoprinses.jpg" alt="LEGO assepoester met muis op haar hand" />
+							<figcaption><h3>Disney</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legospiderman.jpg" alt="LEGO Spider-men die slingert aan zijn spider-web" />
+							<figcaption><h3>Marvel</h3></figcaption>
+						</figure>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+						<figure>
+							<img src="images/legoonderzeeer.jpg" alt="Een LEGO onderzeeër" />
+							<figcaption><h3>Technic</h3></figcaption>
+						</figure>
+						</a>
+					</li>
 				</ul>
 			</section>    
 		</section>
 
-		<section>
-			<h2>Vind de perfecte set</h2>
-
-			<nav>
-				<a href="#tab1" aria-controls="content">Uitgelicht</a>
-				<a href="#tab2" aria-controls="content">Populair</a>
-			</nav>
-		
-			<section id="content tab 1" aria-live="polite" role="region">
+		<section class="carouselsets" aria-labelledby="carousel van verschillende sets">
+			<div class="infobovencarouselsets">
+				<h2>Vind de perfecte set</h2>
+				<h3>Uitgelicht</h3>
+				<div class="carouselsetsbuttons">
+					<button class="carouselbtnterug"><img src="images/icons/knopnaarlinks.svg" alt="Carouselknop naar links"></button>
+					<button class="carouselbtnverder"><img src="images/icons/knopnaarrechts.svg" alt="Carouselknop naar rechts"></button>
+				</div>
+			</div>
+			<section class="Uitgelicht" aria-label="Uitgelichte sets">
 				<ul>
-					<li>
-						<h3>Feestelijke kersttrein</h3>
-						<button aria-label="Favoriet toevoegen"></button>
-						<p>Nieuw</p>
+					<li class="kaart">
+						<h4>Feestelijke kersttrein</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Nieuw</p>
+						</div>
 						<img src="images/legokersttrein.png" alt="Feestelijke Kersttrein set">
-						<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
-						<p>18+</p>
-						<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
-						<p>956</p>
-						<img src="images/icons/ster.svg" alt="Review sterren">
-						<p>3.8</p>
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>18+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>956</p>
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>3.8</p>
+						</div>
 						<p>€119,99</p>
-						<button aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png">In Tas</button>
+						<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png">In Tas</button>
 					</li>
 
 					<li>
-						<h3>Death Star™</h3>
-      					<button aria-label="Favoriet toevoegen"></button>
-      					<img src="#" alt="LEGO Death Star">
-						<img src="#" alt="Taart met kaarsjes">
-						<p>18+</p>
-						<img src="#" alt="Aantal blokjes">
-						<p>9023</p> 
+						<h4>Death Star™</h4>
+      					<button class="favorietenknopenlabel" aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+      					<img src="images/legodeathstar.png" alt="LEGO Death Star">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>18+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>9023</p> 
+						</div>
      					<p>€999,99</p>
-      					<button aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+					</li>
+
+					<li>
+						<h4>Decoratieve kerstboom voor het hele gezin</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Exclusief</p>
+						</div>
+      					<img src="images/legokerstboommetslee.png" alt="LEGO Decoratieve kerstboom set">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>9+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>3171</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>5.0</p>
+						</div>
+     					<p>€299,99</p>
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+					</li>
+					
+					<li>
+						<h4>Tropisch Aquarium</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Nieuw</p>
+						</div>
+      					<img src="images/legoaquarium.png" alt="LEGO tropisch Aquarium set">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>18+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>4154</p> 
+						</div>
+     					<p>€449,99</p>
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+					</li>
+
+					<li>
+						<h4>Het dorp Zweinsveld - Verzameleditie</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Exclusief</p>
+						</div>
+      					<img src="images/legoharrypotterstad.png" alt="LEGO Dorp Zweinsveld set">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>18+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>3228</p> 
+						</div>
+     					<p>€379,99</p>
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+					</li>
+
+					<li>
+						<h4>Grote minifiguur van de Kerstman</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Exclusief</p>
+						</div>
+      					<img src="images/legokerstman.png" alt="LEGO Harry Potter Zweinsveld dorp">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>10+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>761</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>5.0</p>
+						</div>
+     					<p>€54,99</p>
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+					</li>
+
+					<li>
+						<h4>LEGO® Ideas Home Alone</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Exclusief</p>
+						</div>
+      					<img src="images/legohuis.png" alt="LEGO Home Alone huis set">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>18+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>3955</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>4.9</p>
+						</div>
+     					<p>€54,99</p>
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+					</li>
+
+					<li>
+						<h4>Avengers toren</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Exclusief</p>
+						</div>
+      					<img src="images/legoavengerstoren.png" alt="LEGO Avegengers toren set">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>18+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>5201</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>4.7</p>
+						</div>
+     					<p>€499,99</p>
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+					</li>
+
+					<li>
+						<h4>Millenium Falcon™</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Exclusief</p>
+						</div>
+      					<img src="images/legomilleniumfalcon.png" alt="LEGO Millenium Falcon™ schip set">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>16+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>7541</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>4.5</p>
+						</div>
+     					<p>€849,99</p>
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+					</li>
+
+					<li>
+						<h4>Belle en het Beest kasteel</h4>
+						<div class="favorietenknopenlabel">
+							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
+							<p>Exclusief</p>
+						</div>
+      					<img src="images/legokasteel.png" alt="LEGO Belle en het Beest kasteel set">
+						<div class="specificatiesset">
+							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
+							<p>18+</p>
+							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
+							<p>2916</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>4.9</p>
+						</div>
+     					<p>€279,99</p>
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
 					</li>
 				</ul>
 			</section>
 		</section>
 
-		<section>
+		<section class="gridlegofotos">
 			<h2>Bekijk wat iedereen bouwt</h2>
 			<p>Ga een nieuwe bouwavontuur aan met deze inspirerende LEGO sets</p>
 			<ul>
-				<li>
-					<img src="#" alt="Feestelijke kersttrein op een kastje">
-					<button aria-label="bekijk naam en prijs van de set"></button>
+				<li class="treinopkast">
+					<img src="images/legotreinopkast.png" alt="Feestelijke kersttrein op een kastje">
+					<button class="plusknop" aria-label="bekijk naam en prijs van de set"><img src="images/icons/plusknop.svg"></button>
 				</li>
-				<li>
-					<img src="#" alt="Kerstboom op de tafel met katje ernaast">
-					<button aria-label="bekijk naam en prijs van de set"></button>	
+				<li class="deathstaropkast">
+					<img src="images/legodeathstaropkast.png" alt="Death star op een kast">
+					<button class="plusknop" aria-label="bekijk naam en prijs van de set"><img src="images/icons/plusknop.svg"></button>	
+				</li>
+				<li class="setsinkast">
+					<img src="images/legosetsineenkast.png" alt="LEGO sets in een kast">
+					<button class="plusknop" aria-label="bekijk naam en prijs van de set"><img src="images/icons/plusknop.svg"></button>	
+				</li>
+				<li class="titanicoptafel">
+					<img src="images/legotitanicoptafel.png" alt="Titanic staat op tafel">
+					<button class="plusknop" aria-label="bekijk naam en prijs van de set"><img src="images/icons/plusknop.svg"></button>	
+				</li>
+				<li class="rivendelloptafel">
+					<img src="images/legorivendelloptafel.png" alt="Rivendell op tafel">
+					<button class="plusknop" aria-label="bekijk naam en prijs van de set"><img src="images/icons/plusknop.svg"></button>	
 				</li>
 			</ul>
 		</section>
@@ -245,18 +545,18 @@
 			<h2>Deze week in de aandacht</h2>
 			<p>Een kijkje van dichtbij op LEGO momenten die de moeite waard zijn - van seizoensgebonden pret tot speciale momenten</p>
 			
-			<nav>
-				<a href="#tab1" aria-controls="content">Cadeaus voor volwassenen</a>
-				<a href="#tab2" aria-controls="content">Cadeaus voor vaders</a>
-				<a href="#tab2" aria-controls="content">Cadeaus voor tieners</a>
+			<nav aria-label="Cadeau categorieën">
+				<button id="knopcadeausvolwassenen" aria-expanded="true" aria-controls="Cadeaus voor volwassenen knop">Cadeaus voor volwassenen</button>
+				<button id="knopcadeausvaders" aria-expanded="false" aria-controls="Cadeaus voor vaders knop">Cadeaus voor vaders</button>
+				<button id="knopcadeaustieners" aria-expanded="false" aria-controls="Cadeaus voor tieners knop">Cadeaus voor tieners</button>
 			</nav>
 
-			<section id="content tab volwassenen" aria-live="polite" role="region">
+			<section id="contentcadeusvolwassenen" class="contentcadeausvolwassenen" aria-label="Cadeaus voor volwassenen content">
 				<h3>Deze cadeaus brengen vreugde</h3>
 				<img src="#" alt="Vrouw speelt met lego trein set in feestelijke kerst kamer">
 				<p>Deel je passie voor speelplezier met LEGO sets voor volwassenen.</p>
-				<a href="#">Nu winkelen</a>
-				<a href="#">Meer info</a>
+				<a href="#">Nu winkelen<img src="images/icons/knopnaarrechts.svg" alt="Knop naar rechts"></a>
+				<a href="#">Meer info<img src="images/icons/knopnaarrechts.svg" alt="Knop naar rechts"></a>
 			</section>
 		</section>
 
@@ -267,27 +567,27 @@
 					<h3>Aan de slag met cadeautjes</h3>
 					<img src="#" alt="Lego poppetje in rendier outfit geeft lego hart aan lego friend poppetje">
 					<p>Bekijk ideeën op gelegenheid, leeftijd en prijs. En ook cadeaubonnen!</p>
-					<a href="#">Nu winkelen</a>
+					<a href="#" alt="ga naar de shop">Nu winkelen</a>
 				</li>
 
 				<li>
 					<h3>Lees er alles over!</h3>
 					<img src="#" alt="Lego poppetje met mond open en een hoed op met katapult in zijn hand">
 					<p>Bekijk onze bibliotheek met artikelen voor ideeën en inspiratie.</p>
-					<a href="#">Ontdekken</a>
+					<a href="#" alt="ga naar de bibliotheek">Ontdekken</a>
 				</li>
 
 				<li>
 					<h3>Bouw je set met de LEGO builder-app</h3>
 					<img src="#" alt="Lego instructies op papier als in de app worden bekeken door lego poppetjes">
 					<p>Team op om samen te bouwen of ga solo met 3D interactieve instructies.</p>
-					<a href="#">Downloaden</a>
+					<a href="#" alt="download de app op de app-store of play-store">Downloaden</a>
 				</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>Hidden maken</h2>
+			<h2 class="visually-hidden"></h2>
 			<p>Welkom bij de officiële LEGO® winkel, de fantastische thuisbasis van LEGO bouwspeelgoed, <a href="#">cadeaus</a>, prachtige blikvangers en nog veel meer voor <a href="#">meisjes</a>, <a href="#">jongens</a>, <a href="#">kinderen</a> en volwassenen. Vind het perfecte cadeau voor peuters, <a href="#">kinderen</a>, tieners en volwassenen voor <a href="#">verjaardagen</a> of andere gelegenheden zoals <a href="#">Valentijnsdag</a>, <a href="#">Moederdag</a> en <a href="#">Vaderdag</a>. We zorgen ervoor dat je eenvoudig kunt shoppen en speelgoed vindt dat goed is voor urenlang fantasievol</p>
 		</section>
 	</main>
