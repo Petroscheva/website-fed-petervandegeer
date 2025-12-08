@@ -198,26 +198,21 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Het gaat nog niet zo goed, want ik heb een grote website gekozen met ingewikkelde functies. 
+  Ik ben vooral bezig geweest met de html zo perfect mogelijk maken en alle functies proberen uit te werken, dat de basis css nog bijna niet is gemaakt.
+  Ik moet hard aan de slag al wil ik wat kunnen laten zien.
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Vragen stellen over mijn huidige hamburgermenu, waarom het niet lukt en hoe ik ervoor kan zorgen dat de tekst binnen het menu blijft en niet op de pagina tevoorschijn komt als de pagina groter wordt.
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Niet meer met de navigatie bezig zijn
+  - probeer te focussen op de basis van de website
+  - probeer zoveel mogelijk css te maken.
 
 </details>
 
@@ -231,19 +226,20 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/responsivemaken.jpg" width="375px" alt="de pagina is mooi op groot scherm">
+  <img src="readme-images/responsivemakentwee.jpg" width="375px" alt="de pagina is mooi op kleiner scherm">
+  <img src="readme-images/responsivemakendrie.jpg" width="375px" alt="de pagina is mooi op mobiel scherm">
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/carousel.jpg" width="375px" alt="mooie carousel">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/carouseltwee.jpg" width="375px" alt="minder mooie carousel">
 </details>
 
 
@@ -261,6 +257,12 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
 
   1. CeraPro fonts van de lego website, gedownload van: https://en.bestfonts.pro/font/cera-pro
   2. foto's en video van de lego site: https://www.lego.com/nl-nl/categories/adults-welcome , https://www.lego.com/nl-nl
-  3. media query in js om de nav te maken op verschillende groottes via: https://www.w3schools.com/howto/howto_js_media_queries.asp
+  3. https://www.w3schools.com/accessibility/accessibility_skip_links.php#:~:text=The%20skip%20link%20is%20a,to%20it%20with%20an%20anchor.&text=That's%20it.
+  4. https://www.svgrepo.com/vectors/burger-menu/
+  5. https://www.w3schools.com/html/html_forms.asp
+  6. https://stackoverflow.com/questions/781473/how-to-create-a-label-inside-an-input-element
+  7. https://www.a11yproject.com/posts/how-to-hide-content/
+  8. https://stackoverflow.com/questions/56758098/how-to-position-detail-marker-to-come-after-summary
+
 
 </details>
