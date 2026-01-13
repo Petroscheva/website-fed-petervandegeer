@@ -99,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/onderdelenweghalenadultswelcomescherm.jpg" width="375px" alt="weggestreepte onderdelen van het adultswelcome scherm in het rood, de rest wordt behouden">
 
   Adultswelcome pagina breakdownschets mobiele versie:
-  <img src="readme-images//breakdownschetslegoadultswelcomepagina.jpg" width="375px" alt="breakdown van de hele adults welcome pagina">
+  <img src="readme-images/breakdownschetslegoadultswelcomepagina.jpg" width="375px" alt="breakdown van de hele adults welcome pagina">
 
   homepagina breakdownschets mobiele versie:
   <img src="readme-images/breakdownschetslegohomepagina.jpg" width="375px" alt="breakdown van de hele homepagina">
