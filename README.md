@@ -41,17 +41,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   lego homepagina (pc)
-  <img src="images/legohomepagina.png" width="375px" alt="landingpage van lego.com">
+  <img src="readme-images/legohomepagina.png" width="375px" alt="landingpage van lego.com">
 
   lego homepagina (iphone 14 pro)
-  <img src="images/iphonelegohomepagina.JPG" width="375px" alt="landingpage van lego.com">
+  <img src="readme-images/iphonelegohomepagina.JPG" width="375px" alt="landingpage van lego.com">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   starwars kerstcadeau's 2025 pagina (pc)
-  <img src="images/legoadultswelcome.png" width="375px" alt="pagina voor AFOL's (Adult Fan Of Lego)">
+  <img src="readme-images/legoadultswelcome.png" width="375px" alt="pagina voor AFOL's (Adult Fan Of Lego)">
 
   starwars kerstcadeau's 2025 pagina (iphone 14 pro)
-  <img src="images/iphonelegoadultswelcome.JPG" width="375px" alt="pagina voor AFOL's (Adult Fan Of Lego)">
+  <img src="readme-images/iphonelegoadultswelcome.JPG" width="375px" alt="pagina voor AFOL's (Adult Fan Of Lego)">
  
 </details>
 
