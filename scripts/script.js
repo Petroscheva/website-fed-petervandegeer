@@ -24,7 +24,7 @@ var sluitWinkelenButton = document.querySelector(".winkelenmenusluitknop");
 
 const carouselknopVerder = document.querySelector(".carouselbtnverder");
 const carouselknopTerug = document.querySelector(".carouselbtnterug");
-const carouselsets = document.querySelector('.Uitgelicht ul');
+const carouselsets = document.querySelector('.uitgelicht ul');
 
 //knoppen voor de navigatie in de informatietab//
 function KlikVerder() {

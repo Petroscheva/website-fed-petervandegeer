@@ -51,7 +51,11 @@ body {
   --grijze-achtergrond:grey;
   --modal-blauwe-achtergrond:#005AD2;
   --modal-gele-achtergrond:#FFCF02;
-
+  --donker-grijze-achtergrond: #3a3a3a;
+  --licht-grijze-achtergrond:rgb(226, 226, 226);
+  --licht-blauwe-achtergrond:#b7dcff;
+  --gele-achtergrond:#ffd500;
+  --oranje-knop:#ff7a00;
 }
 
 @font-face {
@@ -125,17 +129,49 @@ p {
 /*********/
 /* Modal */
 /*********/
+.modal{
+  background-color:rgba(255, 255, 255, 0);
+}
 
+.modal h2, .modal p{
+  color:var(--witte-text)
+}
+
+.modal dialog{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
 
 .modal img {
-  width: 1em;
+  width: 5em;
+}
+
+.modal a {
+  color:var(--witte-text);
+  border: 3px solid var(--witte-achtergrond);
+  border-radius: 30px;
+  padding:1em;
+}
+
+.modal button {
+  color:var(--witte-text);
+  border: 3px solid var(--witte-achtergrond);
+  border-radius: 30px;
+  padding:1em;
 }
 
 .modal section:first-child{
+  grid-area: 1 / 1 / 2 / 2; 
   background-color:var(--modal-blauwe-achtergrond);
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .modal section:nth-of-type(2){
+  grid-area: 1 / 1 / 2 / 2; 
   background-color:var(--modal-gele-achtergrond);
 }
 
@@ -190,6 +226,7 @@ html:has(header dialog[open]) {
 .informatietab p{
   margin-left: auto; 
   margin-right: auto;
+
 }
 
 .informatietab .btnterug {
@@ -253,11 +290,19 @@ html:has(header dialog[open]) {
   flex-direction:column;
 }
 
+.blackfridayknop {
+  color:var(--color-text);
+}
+
 #naarrechts {
   margin-left: auto;
 }
 
-.hamburgermenucontent {
+/***********************/
+/* Hamburger menu Open */
+/***********************/
+
+.hamburgermenucontent{
   position: fixed;
   left: 0;
   right: 0;
@@ -266,25 +311,113 @@ html:has(header dialog[open]) {
   background-color: var(--witte-achtergrond);
   transform: translateX(-100%);
   transition: transform 0.3s;
+  z-index: 1000;
+}
+
+.hamburgermenucontent a img {
+  width:3em;
+  position: absolute;
+  left:15px;
+  top:15px;
 }
 
 .hamburgermenucontent img {
-  width:2em;
+  width: 2em;
+}
+
+.hamburgermenucontent ul{
+  margin-top:5em;
+}
+
+.hamburgermenucontent li {
+  display:flex;
+  margin: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--donker-grijze-achtergrond);
+}
+
+.hamburgermenucontent li:first-of-type img{
+  position:absolute;
+  right:15px;
+  top:80px;
+}
+
+.hamburgermenucontent li:nth-of-type(2) img{
+  position:absolute;
+  right:15px;
+  top:137px;
+}
+
+.hamburgermenucontent li:nth-of-type(3) img{
+  position:absolute;
+  right:15px;
+  top:195px;
+}
+
+.hamburgermenucontent li h2{
+  height:24.8px;
+}
+
+.hamburgermenucontent a{
+  color: var(--color-text);
 }
 
 .hamburgermenucontent.toonMenu {
   transform: translateX(0);
 }
 
-.winkelenmenu {
+.menusluitknop {
+  width:4em;
   position: absolute;
+  right:5px;
+  top:30px;
+}
+
+.hamburgermenucontent div:first-of-type img{
+  width:1em;
+  margin-left:1em
+}
+
+.hamburgermenucontent div:first-of-type a{
+  border-bottom: 1px solid var(--donker-grijze-achtergrond);
+}
+
+.speelpleksectie{
+  display:flex;
+  margin-top:1em;
+  padding-bottom:0.2em;
+  padding-top: 0.2em;
+  padding-left:15px;
+  background-color:var(--licht-grijze-achtergrond)
+}
+
+.speelpleksectie p{
+  width:10em;
+  font-size:small;
+  padding-top:4px;
+
+}
+
+.speelpleksectie a{
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75em 0.75em 0.5em 0.5em;
+  background-color: var(--licht-blauwe-achtergrond);
+  position:relative;
+  margin-left:auto;
+  margin-right:12px;
+}
+
+.winkelenmenu {
+  position: fixed;
   left: 0;
-  right: 10%;
-  top: 8em;
+  right: 50%;
+  top: 0;
   bottom: 0;
   background-color: var(--witte-achtergrond);
   transform: translateX(-100%);
   transition: transform 0.3s;
+  z-index: 1000;
 }
 
 .winkelenmenu img {
@@ -298,6 +431,121 @@ html:has(header dialog[open]) {
 /****************/
 /* Hoofd Sectie */
 /****************/
+
+/************************/
+/* Adultswelcome Pagina */
+/************************/
+
+.adultswelcomemain {
+background-color: var(--zwarte-achtergrond);
+color: var(--witte-text);
+}
+
+.adultswelcomemain a {
+  color: var(--witte-text);
+}
+
+.adultswelcomebalk{
+  background-color: var(--donker-grijze-achtergrond);
+}
+.adultswelcomebalk ul{
+  display: flex;  
+  flex-direction: row;
+  align-items: center;
+  flex-basis: auto;
+  padding: 1em;
+  list-style-type: none;
+}
+
+.adultswelcomebalk li{
+  padding: 0.5em;
+}
+
+.adultswelcomebalk li:first-of-type{
+  margin-left:auto;
+}
+
+.adultswelcomebalk li:last-of-type{
+  margin-right:auto;
+}
+
+.adultswelcomebalk img{
+  width:10em;
+}
+.adultswelcomehoofdsection {
+  text-align: center;
+}
+
+.adultswelcomehoofdsection h2 {
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.adultswelcomehoofdsection p {
+  padding-left:1em;
+  padding-right:1em;
+}
+.adultswelcomethemasection{
+  margin:auto;
+  padding:1em;
+}
+
+.adultswelcomethemagrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-basis: auto;
+  list-style-type: none;
+}
+
+.adultswelcomethemagrid p{
+  padding-bottom: 2em;
+}
+
+.adultswelcomethemagrid img{
+  width:5em;
+}
+
+#amusementknop{
+  grid-area: 1 / 1 / 2 / 2; 
+}
+
+#kunstknop{
+  grid-area: 1 / 2 / 2 / 3; 
+}
+
+#reizenknop{
+  grid-area: 1 / 3 / 2 / 4; 
+}
+
+#starwarsknop{
+  grid-area: 1 / 4 / 2 / 5; 
+}
+
+#spelletjesknop{
+  grid-area: 2 / 1 / 3 / 2; 
+}
+
+#wetenschapknop{
+  grid-area: 2 / 2 / 3 / 3; 
+}
+
+#natuurknop{
+  grid-area: 2 / 3 / 3 / 4; 
+}
+
+#voertuigenknop{
+  grid-area: 2 / 4 / 3 / 5; 
+}
+
+/***************/
+/* Hoofdpagina */
+/***************/
 
 .hoofdsectie{
   display: grid;
@@ -487,49 +735,47 @@ html:has(header dialog[open]) {
   background: var(--blauwe-achtergrond);
 }
 
-.infobovencarouselsets {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+.carouselsets h2 {
+  position:relative;
+  left:1em;
+  top:1em;
 }
-
-.infobovencarouselsets h2{
-  grid-area: 2 / 1 / 3 / 6;
-  margin-left: 1em;
+.infobovencarouselsets {
+  display: flex;
+  margin-top:2em;
+  margin-bottom:1em;
 }
 
 .infobovencarouselsets h3{
-  grid-area: 4 / 1 / 5 / 5;
   margin-left: 1em;
 }
 
-.carouselsetsbuttons {
-  grid-area: 4 / 10 / 5 / 12;
+.infobovencarouselsets .carouselsetsbuttons{
+  margin-left:auto;
+  margin-right:5em;
 }
 
 .carouselbtnterug img,
 .carouselbtnverder img{
   align-items: center;
-  width: 1em;
+  width: 2em;
 }
 
 .carouselbtnterug,
 .carouselbtnverder {
-  transform: translateY(-50%);
   color:var(--zwarte-achtergrond);
   border: 3px solid var(--zwarte-achtergrond);
-  cursor: pointer;
-  padding: 0.5em;
+  padding: 0.4em;
   border-radius: 50%;
+  height:fit-content;
 }
 
-.Uitgelicht ul {
+.uitgelicht ul {
   display: flex;
   gap: 1em;
   padding: 0 1em;
   margin: 0;
+  padding-bottom: 1em;
   list-style: none;
 
   overflow-x: auto;
@@ -546,45 +792,93 @@ html:has(header dialog[open]) {
 /* Carousel items */
 /******************/
 
-
-.Uitgelicht li {
+.uitgelicht li {
+	display: grid;
+	grid-template-rows: repeat(6, auto);
+  grid-template-columns: 1fr;
+	gap: 12px;
+	width: 300px;
+	padding: 16px;
+	border-radius: 16px;
+	position: relative;
   scroll-snap-align: center;
-  background-color: var(--witte-text);
+  background-color: var(--witte-achtergrond);
+  flex: 0 0 25%;
 }
 
-.favorietenknopenlabel{
-  display: flex;
-  justify-content: space-between;
+.favorietenknopenlabel {
+  grid-area: 1 / 1 / 2 / 2;
+	display: grid;
+	grid-template-columns: 3em auto;
+	align-items: center;
 }
 
-.uitgelicht li button img{
-  width:1em;
+.favorietenknopenlabel img {
+  background: var(--licht-grijze-achtergrond);
+	border: none;
+	border-radius: 50%;
+	padding: 8px;
 }
 
-
-.uitgelicht h4 {
-  position: absolute;
-  margin-top: 10em;
+.favorietenknopenlabel p {
+	background: var(--gele-achtergrond);
+	padding: 6px 10px;
+	border-radius: 4px;
+  margin-left:auto;
 }
 
+.uitgelicht li > img {
+  grid-area: 2 / 1 / 3 / 2;
+	max-width: 100%;
+	justify-self: center;
+}
 
-.specificatiesset{
-  display:flex;
-  flex-direction: row;
-  padding-bottom: 2em;
+.uitgelicht li h4 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+.specificatiesset {
+  grid-area: 3 / 1 / 4 / 2;
+	display: flex;
+	gap: 16px;
+	align-items: center;
 }
 
 .specificatiesset img {
-  width: 1em;
+	width: 18px;
+	height: 18px;
 }
 
-.intasknop{
-  background-color: var(--oranje-achtergrond);
+.uitgelicht li > p {
+  grid-area: 5 / 1 / 6 / 2;
+	margin: 0;
 }
 
-.intasknop img{
-  width: 1em;
+.intasknop {
+  grid-area: 6 / 1 / 7 / 2;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	background: var(--oranje-knop);
+	color: var(--color-text);
+	border: none;
+	border-radius: 24px;
+	padding: 12px;
+  width:10em;
+  font-weight: bold;
+  font-size: medium;
 }
+
+.intasknop img {
+  width:1em;
+  margin-right:1em;
+  align-items: center;
+	justify-content: center;
+}
+
+/*********************/
+/* Lego sets in grid */
+/*********************/
 
 .gridlegofotos h2{
   text-align: center;
@@ -600,10 +894,11 @@ html:has(header dialog[open]) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
   margin:0;
-  padding:0;
+  padding-left:8px;
+  padding-right:8px;
   list-style:none;
 }
 
@@ -619,7 +914,7 @@ html:has(header dialog[open]) {
   grid-area: 1 / 1 / 2 / 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   }
@@ -628,7 +923,7 @@ html:has(header dialog[open]) {
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -637,7 +932,7 @@ html:has(header dialog[open]) {
   grid-area: 2 / 1 / 4 / 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -646,7 +941,7 @@ html:has(header dialog[open]) {
   grid-area: 4 / 1 / 5 / 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -655,17 +950,9 @@ html:has(header dialog[open]) {
   grid-area: 4 / 2 / 5 / 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-}
-.rivendelloptafel button{
-  grid-area: 2 / 1 / 3 / 2;
-  align-self:start;
-  justify-self: end;
-}
-.gridlegofotos li button img{
-  width:1em;
 }
 
 .gridlegofotos li img:first-of-type {
@@ -673,14 +960,6 @@ html:has(header dialog[open]) {
   grid-column-end:-1;
   grid-row-start:1;
 }
-
-.gridlegofotos li button{
-  grid-area: 2 / 1 / 3 / 2;
-
-  aspect-ratio:1/1;
-  margin:.5rem;
-}
-
 
 /**********/
 /* Footer */
@@ -709,6 +988,16 @@ details[open] summary:after {
 }
 
 @media (min-width:600px) {
+  .tekstadultswelcomehoofdsection{
+  display:flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:35em;
+  }
+
   .hoofdnavigatie {
     position:static;
     translate:unset;
@@ -730,32 +1019,19 @@ details[open] summary:after {
   }
   
   .hamburgermenucontent{
-    position:absolute;
+    position: fixed;
     left:0;
-    right:10%;
-    top:8em;
-    bottom:0;
+    right:50%;
+    top:0;
+    bottom: 0;
+    background-color: var(--witte-achtergrond);
     transform: translateX(-100%);
-    transition: transform .3s;
+    transition: transform 0.3s;
+    z-index: 1000;
   }
 
-  .hamburgermenucontent::backdrop {
-  backdrop-filter:blur(1em);
-  }
-
-  .hamburgermenucontent ul {
-    display:flex;
-    gap:1em;
-  }
-  
-  .hamburgermenucontent button {
-    flex-direction:column;
-    border:none;
-  }
-  
-  .hamburgermenucontent a {
-    /* JOUW CODE HIER - stap 9 */
-    flex-direction:column;
+  .hamburgermenucontent ul{
+    display:block;
   }
 
   .hoofdsectie{
@@ -767,8 +1043,8 @@ details[open] summary:after {
   }
 
   .hoofdsectie img {
-  grid-area: 1 / 1 / 4 / 7;
-  width:100%;
+    grid-area: 1 / 1 / 4 / 7;
+    width:100%;
   }
 
   .blackfridaylogoklein{
@@ -837,18 +1113,74 @@ details[open] summary:after {
     width: 1em;
   }
 
-  .Uitgelicht ul {
+  .uitgelicht ul {
     overflow-x: hidden; 
   }
 
-  .Uitgelicht li {
-    flex: 0 0 50%; 
+  .uitgelicht li {
+    flex: 0 0 25%; 
   }
-
-
 }
 
 @media (min-width:900px) {
+  .adultswelcomethemagrid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  text-align: center;
+  list-style-type: none; 
+  margin-left:auto;
+  margin-right:auto;
+  width:min-content;
+  }
+
+  .adultswelcomethemagrid img{
+  width:6em;
+  }
+
+  .adultswelcomethemagrid li{
+  width:7em;
+  }
+
+  .adultswelcomehoofdsectie p {
+  padding:0em;
+  }
+
+  #amusementknop{
+    grid-area: 1 / 1 / 2 / 2; 
+  }
+
+  #kunstknop{
+    grid-area: 1 / 2 / 2 / 3; 
+  }
+
+  #reizenknop{
+    grid-area: 1 / 3 / 2 / 4; 
+  }
+
+  #starwarsknop{
+    grid-area: 1 / 4 / 2 / 5; 
+  }
+
+  #spelletjesknop{
+    grid-area: 1 / 5 / 2 / 6; 
+  }
+
+  #wetenschapknop{
+    grid-area: 1 / 6 / 2 / 7; 
+  }
+
+  #natuurknop{
+    grid-area: 1 / 7 / 2 / 8; 
+  }
+
+  #voertuigenknop{
+    grid-area: 1 / 8 / 2 / 9; 
+  }
+
   .hoofdnavigatie a:last-of-type {
     flex-direction:row;
   }
@@ -953,11 +1285,11 @@ details[open] summary:after {
     width: 1em;
   }
 
-  .Uitgelicht li {
+  .uitgelicht li {
     flex: 0 0 33.33%;
   }
 
-  .Uitgelicht ul {
+  .uitgelicht ul {
     overflow-x: hidden;
   }
 
@@ -975,7 +1307,78 @@ details[open] summary:after {
 }
 
 @media (min-width:960px) {
+    .parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
 
+  .gridlegofotos ul{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  margin:0;
+  padding-left:8px;
+  padding-right:8px;
+  list-style:none;
+}
+
+.gridlegofotos li img:first-of-type{
+  width:100%;
+  height:auto;
+  align-self:stretch;
+  object-fit:cover;
+  display:block;
+}
+
+.treinopkast{
+  grid-area: 1 / 1 / 3 / 3; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+.deathstaropkast{
+  grid-area: 1 / 3 / 2 / 4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.setsinkast{
+  grid-area: 1 / 4 / 2 / 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.titanicoptafel{
+  grid-area: 2 / 3 / 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.rivendelloptafel{
+  grid-area: 2 / 4 / 3 / 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
   .hoofdsectie{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -1051,11 +1454,11 @@ details[open] summary:after {
     width: 1em;
   }
 
-  .Uitgelicht li {
+  .uitgelicht li {
     flex: 0 0 25%; 
   }
 
-  .Uitgelicht ul {
+  .uitgelicht ul {
     overflow-x: hidden;
   }
 

@@ -58,21 +58,27 @@
             	<li><button id="naarrechts"><img src="images/icons/zoekicoon.svg" alt="zoekicoon"></button></li>
             	<li><a href="#"><img src="/images/icons/accountprofiellogo.svg" alt="account"></a></li>
             	<li><a href="#"><img src="images/icons/hartje.svg" alt="favoriete LEGO sets"></a></li>
-				<li><a href="#">1<img src="images/icons/winkelmand.svg" alt="winkelwagen"></a></li>			
+				<li><a href="#"><img src="images/icons/winkelmand.svg" alt="winkelwagen"></a></li>			
         	</ul>
     	</nav>
 
 		<nav class="hamburgermenucontent">
 			<a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a>
-    		<button class="menusluitknop" aria-hidden="true"><img src="images/icons/kruisje.svg" alt="sluit hamburgermenu"></button>
+    		<button class="menusluitknop"aria-hidden="true"><img src="images/icons/kruisje.svg" alt="sluit hamburgermenu"></button>
     		<ul>
-    			<li><button>Winkelen<img src="images/icons/knopnaarrechts.svg" alt="ga naar winkel categorieën toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+    			<li><button>
+					<h2>Winkelen</h2>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar winkel categorieën toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
 				</button></li>
-				<li><button>Ontdekken<img src="images/icons/knopnaarrechts.svg" alt="ga naar onderwerpen om te ontdekken toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				<li><button>
+					<h2>Ontdekken</h2>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar onderwerpen om te ontdekken toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
 				</button></li>
-				<li><button>Help<img src="images/icons/knopnaarrechts.svg" alt="ga naar hulp onderdelen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
+				<li><button>
+					<h2>Help</h2>
+					<img src="images/icons/knopnaarrechts.svg" alt="ga naar hulp onderdelen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
 				</button></li>
-				<li><a href="#"><h2>Black Friday</h2></a></li>
+				<li><a href="#">Black Friday</a></li>
 				<li><a href="#">Account</a></li>
 				<li><a href="#">629 punten</a></li>
 				<li><a href="#">Mijn verlanglijst</a></li>
@@ -81,19 +87,21 @@
 			<div>
 				<img src="images/icons/locatiepin.svg" alt="locatiepin">
 				<a href="#">Nederland</a>
-				<p>Speel games, bekijk video's en meer!</p>
-				<a href="#">Speelplek<img src="images/icons/pijlnaarrechts.svg" alt="pijl naar rechts"></a>
+				<div class="speelpleksectie">
+					<p>Speel games, bekijk video's en meer!</p>
+					<a href="#">Speelplek</a>
+				</div>
 			</div>
 		</nav>
 		<nav class="winkelenmenu">
-    		<button class="winkelenmenusluitknop" aria-hidden="true"><img src="images/icons/kruisje.svg" alt="sluit menu"></button>
+			<a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a>
 			<ul>
-				<li><a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a></li>
 				<li><button class="winkelenknop">Winkelen</button></li>
 				<li><button class="ontdekkenknop">Ontdekken</button></li>
 				<li><button class="helpknop">Help</button></li>
 				<li><a href="#" class="blackfriday"><h2>Black Friday</h2></a></li>
 			</ul>
+			<button class="winkelenmenusluitknop" aria-hidden="true"><img src="images/icons/kruisje.svg" alt="sluit menu"></button>
     		<ul>
     			<li><button>
 					Sets per thema
@@ -314,23 +322,23 @@
 		</section>
 
 		<section class="carouselsets" aria-label="carousel van verschillende sets">
+			<h2>Vind de perfecte set</h2>
 			<div class="infobovencarouselsets">
-				<h2>Vind de perfecte set</h2>
 				<h3>Uitgelicht</h3>
 				<div class="carouselsetsbuttons">
 					<button class="carouselbtnterug"><img src="images/icons/knopnaarlinks.svg" alt="Carouselknop naar links"></button>
 					<button class="carouselbtnverder"><img src="images/icons/knopnaarrechts.svg" alt="Carouselknop naar rechts"></button>
 				</div>
 			</div>
-			<section class="Uitgelicht" aria-label="Uitgelichte sets">
+			<section class="uitgelicht" aria-label="Uitgelichte sets">
 				<ul>
-					<li class="kaart">
+					<li>
 						<h4>Feestelijke kersttrein</h4>
 						<div class="favorietenknopenlabel">
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Nieuw</p>
 						</div>
-						<img src="images/legokersttrein.png" alt="Feestelijke Kersttrein set">
+						<img class="fotoset" src="images/legokersttrein.png" alt="Feestelijke Kersttrein set">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>18+</p>
@@ -346,15 +354,17 @@
 					<li>
 						<h4>Death Star™</h4>
       					<button class="favorietenknopenlabel" aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
-      					<img src="images/legodeathstar.png" alt="LEGO Death Star">
+      					<img class="fotoset" src="images/legodeathstar.png" alt="LEGO Death Star">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>18+</p>
 							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
 							<p>9023</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>5.0</p>
 						</div>
      					<p>€999,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>
 					</li>
 
 					<li>
@@ -363,7 +373,7 @@
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Exclusief</p>
 						</div>
-      					<img src="images/legokerstboommetslee.png" alt="LEGO Decoratieve kerstboom set">
+      					<img class="fotoset" src="images/legokerstboommetslee.png" alt="LEGO Decoratieve kerstboom set">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>9+</p>
@@ -373,7 +383,7 @@
 							<p>5.0</p>
 						</div>
      					<p>€299,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+						<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>					
 					</li>
 					
 					<li>
@@ -382,15 +392,17 @@
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Nieuw</p>
 						</div>
-      					<img src="images/legoaquarium.png" alt="LEGO tropisch Aquarium set">
+      					<img class="fotoset" src="images/legoaquarium.png" alt="LEGO tropisch Aquarium set">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>18+</p>
 							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
 							<p>4154</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>5.0</p>
 						</div>
      					<p>€449,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>
 					</li>
 
 					<li>
@@ -399,15 +411,17 @@
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Exclusief</p>
 						</div>
-      					<img src="images/legoharrypotterstad.png" alt="LEGO Dorp Zweinsveld set">
+      					<img class="fotoset" src="images/legoharrypotterstad.png" alt="LEGO Dorp Zweinsveld set">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>18+</p>
 							<img src="images/icons/aantalblokjes.svg" alt="Aantal blokjes">
 							<p>3228</p> 
+							<img src="images/icons/ster.svg" alt="Review sterren">
+							<p>5.0</p>
 						</div>
      					<p>€379,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>					
 					</li>
 
 					<li>
@@ -416,7 +430,7 @@
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Exclusief</p>
 						</div>
-      					<img src="images/legokerstman.png" alt="LEGO Harry Potter Zweinsveld dorp">
+      					<img class="fotoset" src="images/legokerstman.png" alt="LEGO Harry Potter Zweinsveld dorp">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>10+</p>
@@ -426,7 +440,7 @@
 							<p>5.0</p>
 						</div>
      					<p>€54,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>						
 					</li>
 
 					<li>
@@ -435,7 +449,7 @@
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Exclusief</p>
 						</div>
-      					<img src="images/legohuis.png" alt="LEGO Home Alone huis set">
+      					<img class="fotoset" src="images/legohuis.png" alt="LEGO Home Alone huis set">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>18+</p>
@@ -445,7 +459,7 @@
 							<p>4.9</p>
 						</div>
      					<p>€54,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>						
 					</li>
 
 					<li>
@@ -454,7 +468,7 @@
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Exclusief</p>
 						</div>
-      					<img src="images/legoavengerstoren.png" alt="LEGO Avegengers toren set">
+      					<img class="fotoset" src="images/legoavengerstoren.png" alt="LEGO Avengers toren set">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>18+</p>
@@ -464,7 +478,7 @@
 							<p>4.7</p>
 						</div>
      					<p>€499,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>					
 					</li>
 
 					<li>
@@ -473,7 +487,7 @@
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Exclusief</p>
 						</div>
-      					<img src="images/legomilleniumfalcon.png" alt="LEGO Millenium Falcon™ schip set">
+      					<img class="fotoset" src="images/legomilleniumfalcon.png" alt="LEGO Millenium Falcon™ schip set">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>16+</p>
@@ -483,7 +497,7 @@
 							<p>4.5</p>
 						</div>
      					<p>€849,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>					
 					</li>
 
 					<li>
@@ -492,7 +506,7 @@
 							<button aria-label="Favoriet toevoegen"><img src="images/icons/hartje.svg" alt="hartje icoon knop voor favorieten"></button>
 							<p>Exclusief</p>
 						</div>
-      					<img src="images/legokasteel.png" alt="LEGO Belle en het Beest kasteel set">
+      					<img class="fotoset" src="images/legokasteel.png" alt="LEGO Belle en het Beest kasteel set">
 						<div class="specificatiesset">
 							<img src="images/icons/taartmetkaarsjes.svg" alt="Taart met kaarsjes">
 							<p>18+</p>
@@ -502,7 +516,7 @@
 							<p>4.9</p>
 						</div>
      					<p>€279,99</p>
-      					<button class="intasknop" aria-label="Product in winkelwagen stoppen">In Tas</button>						
+      					<button class="intasknop" aria-label="Product in winkelwagen stoppen"><img src="images/tasje.png" alt="in tas stoppen">In Tas</button>						
 					</li>
 				</ul>
 			</section>
@@ -514,23 +528,17 @@
 			<ul>
 				<li class="treinopkast">
 					<img src="images/legotreinopkast.png" alt="Feestelijke kersttrein op een kastje">
-					<button class="plusknop"><img src="images/icons/plusknop.svg" alt="plusknop"></button>
 				</li>
 				<li class="deathstaropkast">
 					<img src="images/legodeathstaropkast.png" alt="Death star op een kast">
-					<button class="plusknop"><img src="images/icons/plusknop.svg" alt="plusknop"></button>	
-				</li>
 				<li class="setsinkast">
 					<img src="images/legosetsineenkast.png" alt="LEGO sets in een kast">
-					<button class="plusknop"><img src="images/icons/plusknop.svg" alt="plusknop"></button>	
 				</li>
 				<li class="titanicoptafel">
 					<img src="images/legotitanicoptafel.png" alt="Titanic staat op tafel">
-					<button class="plusknop"><img src="images/icons/plusknop.svg" alt="plusknop"></button>	
 				</li>
 				<li class="rivendelloptafel">
 					<img src="images/legorivendelloptafel.png" alt="Rivendell op tafel">
-					<button class="plusknop"><img src="images/icons/plusknop.svg" alt="plusknop"></button>	
 				</li>
 			</ul>
 		</section>
