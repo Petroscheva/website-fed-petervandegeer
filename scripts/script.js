@@ -11,8 +11,8 @@ const headertekst3 = document.querySelector(".headertekst3");
 
 const knopVerder = document.querySelector(".btnverder");
 const knopTerug = document.querySelector(".btnterug");
-const sluitKnop = document.querySelector(".sluiten");
-const informatietab = document.querySelector(".informatietab");
+const sluitKnop = document.querySelector("header .informatietab .sluiten");
+const informatietab = document.querySelector("header .informatietab");
 
 var openButton = document.getElementById("hamburgermenu");
 const hamburgermenu = document.querySelector(".hamburgermenucontent");
@@ -28,7 +28,6 @@ const carouselsets = document.querySelector('.uitgelicht ul');
 
 let mediaQueryDesktop = window.matchMedia("(min-width: 900px)");
 let footerDetails = document.querySelectorAll("footer details");
-
 
 //knoppen voor de navigatie in de informatietab//
 function KlikVerder() {
@@ -61,13 +60,14 @@ function KlikTerug() {
     }
 }
 
-function sluitTab() {
-    informatietab.classList.add("hidden");
+function sluitTab(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  informatietab.classList.add("hidden");
 }
-
 //hamburgermenu openen//
 function openMenu() {  
-    hamburgermenu.classList.toggle("toonMenu");
+  hamburgermenu.classList.toggle("toonMenu");
 }
 
 //hamburgermenu sluiten//
@@ -75,7 +75,7 @@ function sluitMenu() {
   hamburgermenu.classList.remove("toonMenu");
 }
 
-// escape sluit beide menus
+// escape sluit beide menus //
 function escapeknopSluitMenus(event) {
   if (event.key == "Escape") {
     hamburgermenu.classList.remove("toonMenu");
@@ -83,7 +83,7 @@ function escapeknopSluitMenus(event) {
   }
 }
 
-// nieuw / themas switchen
+// nieuw / themas switchen //
 function KlikopThemas() {
   themassection.classList.remove("hidden");
   nieuwsection.classList.add("hidden");
@@ -93,7 +93,7 @@ function KlikopNieuw() {
   themassection.classList.add("hidden");
 }
 
-//Winkelenmenu openen/sluiten
+//Winkelenmenu openen/sluiten //
 function openWinkelenMenu() {  
   winkelmenu.classList.toggle("toonMenu");
 }
@@ -111,6 +111,7 @@ function CarouselKlikVerder() {
   carouselsets.scrollBy({ left: slideWidth, behavior: 'smooth' });
 }
 
+// ChatGPT //
 function zetFooterDetailsOpen() {
   if (mediaQueryDesktop.matches) {
     footerDetails.forEach(function(details) {
@@ -125,29 +126,52 @@ function zetFooterDetailsOpen() {
 
 zetFooterDetailsOpen();
 
-// Event listeners//
+
+// Event listeners //
 //wanneer de pagina laad komt er een modal tevoorschijn//
 window.addEventListener("load", () => {
-   dialog.showModal();
+   if (dialog) {
+     dialog.showModal();
+   }
 });
 
-knopVerder.addEventListener("click", KlikVerder);
-knopTerug.addEventListener("click", KlikTerug);
-sluitKnop.addEventListener("click", sluitTab);
+if (knopVerder) {
+  knopVerder.addEventListener("click", KlikVerder);
+}
+if (knopTerug) {
+  knopTerug.addEventListener("click", KlikTerug);
+}
+if (sluitKnop) {
+  sluitKnop.addEventListener("click", sluitTab);
+}
 
-openButton.onclick = openMenu;
-sluitButton.onclick = sluitMenu;
+if (openButton) {
+  openButton.onclick = openMenu;
+}
+if (sluitButton) {
+  sluitButton.onclick = sluitMenu;
+}
 window.onkeydown = escapeknopSluitMenus;
 
-themasbutton.addEventListener("click", KlikopThemas);
-nieuwbutton.addEventListener("click", KlikopNieuw);
+if (themasbutton) {
+  themasbutton.addEventListener("click", KlikopThemas);
+}
+if (nieuwbutton) {
+  nieuwbutton.addEventListener("click", KlikopNieuw);
+}
 
-openWinkelenButton.onclick = openWinkelenMenu;
-sluitWinkelenButton.onclick = sluitWinkelenMenu;
+if (openWinkelenButton) {
+  openWinkelenButton.onclick = openWinkelenMenu;
+}
+if (sluitWinkelenButton) {
+  sluitWinkelenButton.onclick = sluitWinkelenMenu;
+}
 
-carouselknopVerder.addEventListener("click", CarouselKlikVerder);
-carouselknopTerug.addEventListener("click", CarouselKlikTerug);
+if (carouselknopVerder && carouselsets) {
+  carouselknopVerder.addEventListener("click", CarouselKlikVerder);
+}
+if (carouselknopTerug && carouselsets) {
+  carouselknopTerug.addEventListener("click", CarouselKlikTerug);
+}
 
 mediaQueryDesktop.addEventListener("change", zetFooterDetailsOpen);
-
-

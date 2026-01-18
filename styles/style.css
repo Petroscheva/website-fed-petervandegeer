@@ -18,7 +18,7 @@ button {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /*https://www.a11yproject.com/posts/how-to-hide-content/*/
@@ -58,6 +58,10 @@ body {
   --oranje-knop:#ff7a00;
   --footer-achtergrond:#221943;
   --footer-donkere-achtergrond:#150f29;
+  --blur-achtergrond:rgba(0,0,0,0.55);
+  --lichte-knop-achtergrond: #dbe9ff;
+  --cookie-achtergrond: rgba(0,0,0,0.8);
+  --adultswelcome-balk-achtergrond:#1a1a1a;
 }
 
 @font-face {
@@ -131,60 +135,140 @@ p {
 /*********/
 /* Modal */
 /*********/
-.modal{
-  background-color:rgba(255, 255, 255, 0);
+
+.modal {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: min(360px, 92vw);
+  margin: auto;
+  overflow: visible;
 }
 
-.modal h2, .modal p{
-  color:var(--witte-text)
+.modal::backdrop {
+  background: var(--blur-achtergrond) ;
+  backdrop-filter: blur(10px);
 }
 
-.modal dialog{
+.modal form {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-rows: auto auto auto;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
-.modal img {
-  width: 5em;
+/**********************/
+/* Blauwe Achtergrond */
+/**********************/
+
+.modal form section:first-of-type {
+  background: var(--modal-blauwe-achtergrond);
+  color: var(--witte-text);
+  padding: 2.3em 1.5em 1.6em;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1em;
+  justify-items: center;
 }
 
-.modal a {
-  color:var(--witte-text);
-  border: 3px solid var(--witte-achtergrond);
-  border-radius: 30px;
-  padding:1em;
+.modal form section:first-of-type h2,
+.modal form section:first-of-type p,
+.modal form section:first-of-type button {
+  grid-column: 1 / -1;
 }
 
-.modal button {
-  color:var(--witte-text);
-  border: 3px solid var(--witte-achtergrond);
-  border-radius: 30px;
-  padding:1em;
+.modal form section:first-of-type h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
 }
 
-.modal section:first-child{
-  grid-area: 1 / 1 / 2 / 2; 
-  background-color:var(--modal-blauwe-achtergrond);
-  margin-left:auto;
-  margin-right:auto;
+.modal form section:first-of-type img {
+  width: 50px;
+  height: 50px;
+  background: var(--witte-achtergrond);
+  padding: 10px;
+  box-sizing: content-box;
+  object-fit: contain;
+  border-radius: 20px;
 }
 
-.modal section:nth-of-type(2){
-  grid-area: 1 / 1 / 2 / 2; 
-  background-color:var(--modal-gele-achtergrond);
+.modal form section:first-of-type button {
+  width: 100%;
+  background:var(--lichte-knop-achtergrond);
+  color: var(--color-text);
+  border: none;
+  border-radius: 50px;
+  padding: 0.85em;
+  font-weight: 700;
 }
 
-dialog::backdrop {
-	backdrop-filter:blur(1em);
+/********************/
+/* Gele Achtergrond */
+/********************/
+
+.modal form section:last-of-type {
+  background: var(--gele-achtergrond);
+  color: var(--color-text);
+  padding: 2.6em 1.5em 1.8em;
+  text-align: center;
+  display: grid;
+  gap: 1em;
+  justify-items: center;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
 }
 
-html:has(header dialog[open]) {
-	overflow:scroll;
-	scrollbar-gutter: stable;
+.modal form section:last-of-type h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
 }
+
+.modal form section:last-of-type img {
+  width: min(210px, 80%);
+}
+
+.modal form section:last-of-type a {
+  width: 100%;
+  background: var(--lichte-knop-achtergrond);
+  color:  var(--color-text);
+  border-radius: 50px;
+  padding: 0.85em;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*****************************/
+/* Lego logo en Cookie tekst */
+/*****************************/
+
+.modal form > img {
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 115px);
+  transform: translateX(-50%);
+  width: 48px;
+  z-index: 10;
+}
+
+.modal form > p {
+  background: var(--cookie-achtergrond);
+  color: var(--witte-text);
+  padding: 0.9em 1em;
+  font-size: 0.75em;
+  text-align: center;
+  margin-top:1em;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.modal form > p a {
+  color: var(--witte-text);
+  text-decoration: underline;
+}
+
 
 /*ik heb de info over een skiplink gehaald van: https://www.w3schools.com/accessibility/accessibility_skip_links.php#:~:text=The%20skip%20link%20is%20a,to%20it%20with%20an%20anchor.&text=That's%20it.*/
 .skiplink {
@@ -292,6 +376,10 @@ html:has(header dialog[open]) {
   flex-direction:column;
 }
 
+.hoofdnavigatie a:hover{
+  text-decoration: underline;
+}
+
 .hoofdnavigatie button{
   font-weight: bold;
 }
@@ -345,19 +433,19 @@ html:has(header dialog[open]) {
 .hamburgermenucontent li:first-of-type img{
   position:absolute;
   right:15px;
-  top:80px;
+  top:75px;
 }
 
 .hamburgermenucontent li:nth-of-type(2) img{
   position:absolute;
   right:15px;
-  top:137px;
+  top:125px;
 }
 
 .hamburgermenucontent li:nth-of-type(3) img{
   position:absolute;
   right:15px;
-  top:195px;
+  top:170px;
 }
 
 .hamburgermenucontent li h2{
@@ -491,7 +579,7 @@ html:has(header dialog[open]) {
 
 .winkelenmenu a{
   color: var(--color-text);
-}
+} 
 
 .winkelenmenusluitknop {
   width:4em;
@@ -528,12 +616,14 @@ color: var(--witte-text);
 .adultswelcomebalk{
   background-color: var(--donker-grijze-achtergrond);
 }
+
 .adultswelcomebalk ul{
   display: flex;  
   flex-direction: row;
   align-items: center;
   flex-basis: auto;
   padding: 1em;
+  gap:1em;
   list-style-type: none;
 }
 
@@ -552,6 +642,11 @@ color: var(--witte-text);
 .adultswelcomebalk img{
   width:10em;
 }
+
+.adultswelcomebalk a:hover{
+  text-decoration: underline;
+}
+
 .adultswelcomehoofdsection {
   text-align: center;
 }
@@ -565,62 +660,52 @@ color: var(--witte-text);
   padding-left:1em;
   padding-right:1em;
 }
+
 .adultswelcomethemasection{
-  margin:auto;
-  padding:1em;
+  margin: auto;
+  padding: 1em;
+  padding-bottom: 2em;
 }
 
 .adultswelcomethemagrid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  justify-content: space-around;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adultswelcomethemagrid li{
+  display: grid;
+  grid-template-rows: 80px auto; 
+  justify-items: center;
+  align-items: start;
+  row-gap: 0.6em;
   text-align: center;
-  flex-basis: auto;
-  list-style-type: none;
 }
 
-.adultswelcomethemagrid p{
-  padding-bottom: 2em;
+.adultswelcomethemagrid li button{
+  display: grid;
+  place-items: center;
+  width: 100%;
 }
 
-.adultswelcomethemagrid img{
-  width:5em;
+.adultswelcomethemagrid li img{
+  height: 80px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
 }
 
-#amusementknop{
-  grid-area: 1 / 1 / 2 / 2; 
-}
-
-#kunstknop{
-  grid-area: 1 / 2 / 2 / 3; 
-}
-
-#reizenknop{
-  grid-area: 1 / 3 / 2 / 4; 
-}
-
-#starwarsknop{
-  grid-area: 1 / 4 / 2 / 5; 
-}
-
-#spelletjesknop{
-  grid-area: 2 / 1 / 3 / 2; 
-}
-
-#wetenschapknop{
-  grid-area: 2 / 2 / 3 / 3; 
-}
-
-#natuurknop{
-  grid-area: 2 / 3 / 3 / 4; 
-}
-
-#voertuigenknop{
-  grid-area: 2 / 4 / 3 / 5; 
+.adultswelcomethemagrid li p{
+  margin: 0;
+  font-size: 0.8em;
+  min-height: 4em; 
 }
 
 /***************/
@@ -816,13 +901,13 @@ color: var(--witte-text);
 
 .carouselsets{
   background: var(--blauwe-achtergrond);
+  padding-top: 1em;
 }
 
 .carouselsets h2 {
-  position:relative;
-  left:1em;
-  top:1em;
+  padding-left: 0.7em;
 }
+
 .infobovencarouselsets {
   display: flex;
   margin-top:2em;
@@ -983,6 +1068,7 @@ color: var(--witte-text);
   padding-left:8px;
   padding-right:8px;
   list-style:none;
+  padding-bottom:8px;
 }
 
 .gridlegofotos li img:first-of-type{
@@ -1178,10 +1264,6 @@ details li a {
   padding: 0.75em 0;
 }
 
-details li a:hover {
-  font-weight: bold;
-}
-
 footer h2 {
   margin-top: 2em;
   font-size: 1em;
@@ -1223,6 +1305,44 @@ footer p {
 }
 
 @media (min-width:600px) {
+  .modal {
+    width: min(720px, 90vw);
+  }
+
+  .modal form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    border-radius: 14px;
+  }
+
+  .modal form section:first-of-type {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    padding: 3em 2em;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+  }
+
+  .modal form section:last-of-type {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    padding: 3em 2em;
+    border-radius: 0;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+
+  .modal form > img {
+    top: 0;
+    width: 56px;
+  }
+
+  .modal form > p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 1em;
+  }
+
   .tekstadultswelcomehoofdsection{
   display:flex;
   flex-direction: column;
@@ -1386,37 +1506,6 @@ footer p {
   padding:0em;
   }
 
-  #amusementknop{
-    grid-area: 1 / 1 / 2 / 2; 
-  }
-
-  #kunstknop{
-    grid-area: 1 / 2 / 2 / 3; 
-  }
-
-  #reizenknop{
-    grid-area: 1 / 3 / 2 / 4; 
-  }
-
-  #starwarsknop{
-    grid-area: 1 / 4 / 2 / 5; 
-  }
-
-  #spelletjesknop{
-    grid-area: 1 / 5 / 2 / 6; 
-  }
-
-  #wetenschapknop{
-    grid-area: 1 / 6 / 2 / 7; 
-  }
-
-  #natuurknop{
-    grid-area: 1 / 7 / 2 / 8; 
-  }
-
-  #voertuigenknop{
-    grid-area: 1 / 8 / 2 / 9; 
-  }
 
   .hoofdnavigatie a:last-of-type {
     flex-direction:row;
@@ -1834,6 +1923,8 @@ footer p {
     top: 8.5em;
     left: 8em;
     width:30em;
+    max-width: calc(100vw - 6em);
+    overflow-x: hidden;  
   }
 
   .hoofdsectie h2 {
@@ -1867,8 +1958,130 @@ footer p {
   
 }
 
-@media (prefers-color-scheme:dark) {   
-  svg {     fill:white;   } 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--zwarte-achtergrond);
+    color: var(--witte-text);
+  }
 
-} 
+  .informatietab{
+    background: var(--adultswelcome-balk-achtergrond) ;
+  }
+
+  .hoofdnavigatie{
+    background-color: var(--modal-blauwe-achtergrond);
+  }
+  .hoofdnavigatie button {
+    color: var(--witte-text);
+  }
+
+  body.home a {
+    color: var(--witte-text);
+  }
+
+  .informatietab img, .hoofdnavigatie img, footer img {
+    filter: invert(1);
+  }
+
+  .hamburgermenucontent {
+    background-color: var(--zwarte-achtergrond);
+  }
+
+  .hamburgermenucontent img {
+    filter: invert(1);
+  }
+
+  .hamburgermenucontent button {
+    color: var(--witte-text);
+  }
+
+  .winkelenmenu {
+    background-color: var(--zwarte-achtergrond);
+  }
+
+  .winkelenmenu img {
+    filter: invert(1);
+  }
+
+  .winkelenmenu button {
+    color: var(--witte-text);
+  }
+
+  .winkelenmenu .winkelenknop {
+    border-bottom: 4px solid var(--witte-achtergrond);
+  }
+
+  .speelpleksectie {
+    background-color: var(--adultswelcome-balk-achtergrond);
+  }
+
+  .speelpleksectie a {
+    background-color: var(--modal-blauwe-achtergrond);
+  }
+
+  .hoofdnavigatie button {
+    color: var(--witte-text);
+  }
+
+  .carouselmetbuttons {
+    background-color: var(--adultswelcome-balk-achtergrond);
+  }
+
+  .carouselsets {
+    background-color: var(--zwarte-achtergrond);
+  }
+
+  .uitgelicht li {
+    background-color: var(--donker-grijze-achtergrond);
+  }
+
+  .intasknop img {
+    filter: invert(1);
+  }
+
+  .intasknop {
+    color:var(--witte-text)
+  }
+
+  .carouselsetsbuttons img, .favorietenknopenlabel button, .specificatiesset img{
+    filter: invert(1);
+  }
+
+  .carouselsetsbuttons button{
+    border-color: var(--witte-achtergrond);
+  }
+  body.adults .adultswelcomemain {
+    background: var(--zwarte-achtergrond);
+    color: var(--witte-text);
+  }
+
+  body.adults a {
+    color: var(--witte-text);
+  }
+
+  body.adults .adultswelcomebalk {
+    background: var(--adultswelcome-balk-achtergrond);
+  }
+
+  .informatietab img, .hoofdnavigatie img, footer img {
+    filter: invert(1);
+  }
+  
+  /* ChatGPT */
+    body.home img[src*="legologo.svg"] {
+    filter: none;
+  }
+  body.adults img[src*="legologo.svg"] {
+    filter: none;
+  }
+
+  footer {
+    background-color: var(--adultswelcome-balk-achtergrond);
+  }
+
+  .locatievlak {
+    background-color: var(--donker-grijze-achtergrond);
+  }
+
+}
 
