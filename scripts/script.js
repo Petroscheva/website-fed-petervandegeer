@@ -26,6 +26,10 @@ const carouselknopVerder = document.querySelector(".carouselbtnverder");
 const carouselknopTerug = document.querySelector(".carouselbtnterug");
 const carouselsets = document.querySelector('.uitgelicht ul');
 
+let mediaQueryDesktop = window.matchMedia("(min-width: 900px)");
+let footerDetails = document.querySelectorAll("footer details");
+
+
 //knoppen voor de navigatie in de informatietab//
 function KlikVerder() {
     if (!headertekst1.classList.contains("hidden")) {
@@ -107,6 +111,20 @@ function CarouselKlikVerder() {
   carouselsets.scrollBy({ left: slideWidth, behavior: 'smooth' });
 }
 
+function zetFooterDetailsOpen() {
+  if (mediaQueryDesktop.matches) {
+    footerDetails.forEach(function(details) {
+      details.setAttribute("open", "");
+    });
+  } else {
+    footerDetails.forEach(function(details) {
+      details.removeAttribute("open");
+    });
+  }
+}
+
+zetFooterDetailsOpen();
+
 // Event listeners//
 //wanneer de pagina laad komt er een modal tevoorschijn//
 window.addEventListener("load", () => {
@@ -129,3 +147,7 @@ sluitWinkelenButton.onclick = sluitWinkelenMenu;
 
 carouselknopVerder.addEventListener("click", CarouselKlikVerder);
 carouselknopTerug.addEventListener("click", CarouselKlikTerug);
+
+mediaQueryDesktop.addEventListener("change", zetFooterDetailsOpen);
+
+
