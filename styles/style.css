@@ -811,7 +811,7 @@ color: var(--witte-text);
 }
 
 .carouselmetbuttons nav button:first-of-type{
-  margin-right: auto
+  margin-right: auto;
   margin-left: 1em;
 }
 
