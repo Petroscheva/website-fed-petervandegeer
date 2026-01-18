@@ -384,6 +384,10 @@ p {
   font-weight: bold;
 }
 
+.hoofdnavigatie button:hover {
+  text-decoration: underline;
+}
+
 .blackfridayknop {
   color:var(--color-text);
 }
@@ -544,10 +548,18 @@ p {
   font-weight: bold;
 }
 
+.selectiemenu li button:hover {
+text-decoration: underline;
+}
+
 .selectiemenu li a{
   text-align: center;
   padding-bottom:0.5em;
   font-size: small;
+}
+
+.selectiemenu li a:hover{
+  text-decoration: underline;
 }
 
 .selectiemenu li:first-of-type {
@@ -708,6 +720,11 @@ color: var(--witte-text);
   min-height: 4em; 
 }
 
+.adultswelcomethemagrid li button:hover + p,
+.adultswelcomethemagrid li button:focus-visible + p {
+  text-decoration: underline;
+}
+
 /***************/
 /* Hoofdpagina */
 /***************/
@@ -757,6 +774,10 @@ color: var(--witte-text);
 
 .hoofdsectielinkjes ul a  {
   padding: 0.5em;
+}
+
+.hoofdsectielinkjes ul a:hover {
+  font-weight: bold;
 }
 
 .hoofdsectielinkjes ul a:first-of-type{
@@ -809,6 +830,10 @@ color: var(--witte-text);
   color: var(--witte-text);
   font-size: 1.5em;
   font-weight: 600;
+}
+
+.carouselmetbuttons nav button:hover{
+  text-decoration: underline;
 }
 
 .carouselmetbuttons nav button:first-of-type{
@@ -894,7 +919,6 @@ color: var(--witte-text);
   font-weight: 600;
 }
 
-
 /*****************/
 /* Carousel Sets */
 /*****************/
@@ -927,6 +951,12 @@ color: var(--witte-text);
 .carouselbtnverder img{
   align-items: center;
   width: 2em;
+}
+
+.carouselbtnterug:hover,
+.carouselbtnverder:hover{
+  background-color: var(--witte-achtergrond);
+  border: 0px solid var(--zwarte-achtergrond);
 }
 
 .carouselbtnterug,
@@ -988,6 +1018,10 @@ color: var(--witte-text);
 	padding: 8px;
 }
 
+.favorietenknopenlabel img:hover{
+  background:var(--grijze-achtergrond)
+}
+
 .favorietenknopenlabel p {
 	background: var(--gele-achtergrond);
 	padding: 6px 10px;
@@ -1035,6 +1069,10 @@ color: var(--witte-text);
   width:10em;
   font-weight: bold;
   font-size: medium;
+}
+
+.intasknop:hover {
+  background: var(--oranje-achtergrond)
 }
 
 .intasknop img {
@@ -1215,6 +1253,10 @@ footer form input[type="email"] {
   margin-left:0em;
   background-color: var(--oranje-knop);
   border: none;
+}
+
+.submitknop:hover{
+  background-color: var(--oranje-achtergrond);
 }
 
 .submitknop img {
@@ -2081,6 +2123,11 @@ footer p {
 
   .locatievlak {
     background-color: var(--donker-grijze-achtergrond);
+  }
+
+  .carouselbtnterug:hover,
+  .carouselbtnverder:hover{
+  background-color: var(--grijze-achtergrond);
   }
 
 }
