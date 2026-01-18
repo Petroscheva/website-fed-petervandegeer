@@ -1960,12 +1960,12 @@ footer p {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: var(--zwarte-achtergrond);
+    background-color: var(--zwarte-achtergrond);
     color: var(--witte-text);
   }
 
   .informatietab{
-    background: var(--adultswelcome-balk-achtergrond) ;
+    background-color: var(--adultswelcome-balk-achtergrond) ;
   }
 
   .hoofdnavigatie{
@@ -2051,7 +2051,7 @@ footer p {
     border-color: var(--witte-achtergrond);
   }
   body.adults .adultswelcomemain {
-    background: var(--zwarte-achtergrond);
+    background-color: var(--zwarte-achtergrond);
     color: var(--witte-text);
   }
 
@@ -2060,7 +2060,7 @@ footer p {
   }
 
   body.adults .adultswelcomebalk {
-    background: var(--adultswelcome-balk-achtergrond);
+    background-color: var(--adultswelcome-balk-achtergrond);
   }
 
   .informatietab img, .hoofdnavigatie img, footer img {
