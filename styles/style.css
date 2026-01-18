@@ -806,18 +806,18 @@ color: var(--witte-text);
   padding: 1em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
 .carouselmetbuttons nav button:first-of-type{
-  margin-right: auto;
+  margin-right: 0.5;
   margin-left: 1em;
 }
 
 .carouselmetbuttons nav button:last-of-type{
   margin-right: auto;
-  margin-left: 1em;
+  margin-left: 0;
 }
 
 .carouselmetbuttons {
