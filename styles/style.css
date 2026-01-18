@@ -730,12 +730,14 @@ color: var(--witte-text);
   color: var(--witte-text);
   grid-area: 4 / 1 / 5 / 8;
   padding-left: 0.5em;
+  padding-right:8px;
 }
 
 .hoofdsectie p {
   color: var(--witte-text);
   grid-area: 5 / 1 / 6 / 8;
   padding-left: 0.9em;
+  padding-right:8px;
 }
 
 .hoofdsectielinkjes{
@@ -810,7 +812,7 @@ color: var(--witte-text);
 }
 
 .carouselmetbuttons nav button:first-of-type{
-  margin-left:1em;
+  margin-left:15px;
 }
 
 .carouselmetbuttons nav button:last-of-type{
