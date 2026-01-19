@@ -1711,7 +1711,7 @@ footer p {
     padding: 0;
   }
 
-  /*ChatGPT details open zetten d.m.v. JS */
+  /* ChatGPT details open zetten d.m.v. JS vraag: "Hoe kan ik de details automatisch open laten zetten als ik naar een groter scherm dan 900 pixels ga?" */
   footer details > summary {
     padding: 0;
     margin-bottom: 1.2em;
@@ -2109,8 +2109,8 @@ footer p {
     filter: invert(1);
   }
   
-  /* ChatGPT */
-    body.home img[src*="legologo.svg"] {
+  /* ChatGPT gebruikt om alle lego logo's niet te laten inverten in één keer vraag:"Hoe kan ik ervoor zorgen dat ik in één keer ervoor zorg dat de lego logo's niet inverten van kleur tijdens de dark mode" */
+  body.home img[src*="legologo.svg"] {
     filter: none;
   }
   body.adults img[src*="legologo.svg"] {

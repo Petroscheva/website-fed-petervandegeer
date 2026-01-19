@@ -17,7 +17,7 @@
 <body class="adults">
 	<header>
 		<a href="#main" class="skiplink">Skip navigatie en ga naar pagina inhoud</a> <!-- ik heb de info over een skiplink gehaald van: https://www.w3schools.com/accessibility/accessibility_skip_links.php#:~:text=The%20skip%20link%20is%20a,to%20it%20with%20an%20anchor.&text=That's%20it.-->
-		<div class="informatietab">
+		<div class="informatietab" aria-live="polite">
 			<button class="btnterug" aria-label="Tekst terug bekijken door op het pijltje naar links te klikken"><img src="images/icons/knopnaarlinks.svg" alt="knop naar links"></button>
 			<p class="headertekst1">GRATIS bezorging voor bestellingen vanaf €55!*<a href="#"> Meer info</a></p>
 			<p class="headertekst2 hidden">Voorproefjes van Black Friday-deals komen eraan op 28-11-2025*<a href="#"> Meer info</a></p>
@@ -25,13 +25,13 @@
 			<button class="btnverder" aria-label="Tekst verder bekijken door op het pijltje naar rechts te klikken"><img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button>
 			<button class="sluiten" aria-label="informatieveld sluiten"><img src="images/icons/kruisje.svg" alt="sluitknop"></button>
 		</div>
-		<nav class="hoofdnavigatie">
+		<nav class="hoofdnavigatie" aria-label="Hoofdnavigatie">
         	<ul>
-				<li><button id="hamburgermenu" aria-hidden="true" aria-label="Het hamburger menu openen"><img src="images/icons/hamburgermenu.svg" alt="hamburger menu"></button></li><!--https://www.svgrepo.com/vectors/burger-menu/-->
+				<li><button id="hamburgermenu" aria-label="hamburger menu openen"><img src="images/icons/hamburgermenu.svg" alt="hamburger menu"></button></li><!--https://www.svgrepo.com/vectors/burger-menu/-->
             	<li><a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a></li>
-				<li><button class="winkelenknop hoofdnavigatieonderdeel" aria-label="Het winkelen menu openen">Winkelen</button></li>
-				<li><button class="ontdekkenknop hoofdnavigatieonderdeel" aria-label="Het ontdekken menu openen">Ontdekken</button></li>
-				<li><button class="helpknop hoofdnavigatieonderdeel" aria-label="Het help menu openen">Help</button></li>
+				<li><button class="winkelenknop hoofdnavigatieonderdeel">Winkelen</button></li>
+				<li><button class="ontdekkenknop hoofdnavigatieonderdeel">Ontdekken</button></li>
+				<li><button class="helpknop hoofdnavigatieonderdeel">Help</button></li>
 				<li><a href="#" class="blackfridayknop hoofdnavigatieonderdeel"><h2>Black Friday</h2></a></li>
             	<li><button id="naarrechts" aria-label="Zoek iets op de website"><img src="images/icons/zoekicoon.svg" alt="zoekicoon"></button></li>
             	<li><a href="#"><img src="images/icons/accountprofiellogo.svg" alt="account"></a></li>
@@ -40,13 +40,13 @@
         	</ul>
     	</nav>
 
-		<nav class="hamburgermenucontent">
+		<nav class="hamburgermenucontent" aria-label="hamburger menu content">
 			<a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a>
-    		<button class="menusluitknop" aria-hidden="true" aria-label="sluit het hamburger menu"><img src="images/icons/kruisje.svg" alt="sluit knop"></button>
+    		<button class="menusluitknop" aria-label="sluit het hamburger menu"><img src="images/icons/kruisje.svg" alt="sluit knop"></button>
     			<ul>
-					<li><button aria-label="ga naar winkel categorieën toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">Winkelen<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
-					<li><button aria-label="ga naar onderwerpen om te ontdekken toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">Ontdekken<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
-					<li><button aria-label="ga naar hulp onderdelen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">Help<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
+					<li><button>Winkelen<img src="images/icons/knopnaarrechts.svg" alt="ga naar winkel categorieën toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen"></button></li>
+					<li><button>Ontdekken<img src="images/icons/knopnaarrechts.svg" alt="ga naar onderwerpen om te ontdekken toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen"></button></li>
+					<li><button>Help<img src="images/icons/knopnaarrechts.svg" alt="ga naar hulp onderdelen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen"></button></li>
 					<li><a href="#">Black Friday</a></li>
 					<li><a href="#">Account</a></li>
 					<li><a href="#">629 punten</a></li>
@@ -62,51 +62,27 @@
 				</div>
 			</div>
 		</nav>
-		<nav class="winkelenmenu">
+		<nav class="winkelenmenu" aria-label="Winkelen menu">
 			<a href="index.html"><img src="images/legologo.svg" alt="LEGO logo met link naar de homepagina"></a>
 			<div class="boxselectiemenu">
 				<ul class="selectiemenu">
-					<li><button class="winkelenknop" aria-label="ga naar het winkelen menu">Winkelen</button></li>
-					<li><button class="ontdekkenknop" aria-label="ga naar het ontdekken menu">Ontdekken</button></li>
-					<li><button class="helpknop" aria-label="ga naar het help menu">Help</button></li>
+					<li><button class="winkelenknop">Winkelen</button></li>
+					<li><button class="ontdekkenknop">Ontdekken</button></li>
+					<li><button class="helpknop">Help</button></li>
 					<li><a href="#" class="blackfriday"><h2>Black Friday</h2></a></li>
 				</ul>
 			</div>
-			<button class="winkelenmenusluitknop" aria-hidden="true" aria-label="klik om het winkelen menu te sluiten"><img src="images/icons/kruisje.svg" alt="sluit knop"></button>
+			<button class="winkelenmenusluitknop" aria-label="klik om het winkelen menu te sluiten"><img src="images/icons/kruisje.svg" alt="sluit knop"></button>
     		<div class="lijstwinkelenmenu">
 				<ul>
-					<li><button aria-label="Ga naar sets per thema toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
-						Sets per thema
-						<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts">
-					</button></li>
-					<li><button aria-label="Ga naar leeftijden toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
-						Leeftijden
-						<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts">
-					</button></li>
-					<li><button aria-label="Ga naar prijsklassen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
-						Prijsklassen
-						<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts">
-					</button></li>
-					<li><button aria-label="Ga naar winkelen voor gelegenheden toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
-						Winkelen voor gelegenheden
-						<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts">
-					</button></li>
-					<li><button aria-label="Ga naar LEGO® producten toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
-						LEGO® producten
-						<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts">
-					</button></li>
-					<li><button aria-label="Ga naar LEGO® huisinrichting toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
-						LEGO® huisinrichting
-						<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts">
-					</button></li>
-					<li><button aria-label="Ga naar Belangstelling toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
-						Belangstelling
-						<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts">
-					</button></li>
-					<li><button aria-label="Ga naar stenen en onderdelen toe door op de knop te drukken, het menu zal zich rechts rechts uitklappen">
-						Stenen en onderdelen
-						<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts">
-					</button></li>
+					<li><button>Sets per thema<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
+					<li><button>Leeftijden<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
+					<li><button>Prijsklassen<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
+					<li><button>Winkelen voor gelegenheden<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
+					<li><button>LEGO® producten<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
+					<li><button>LEGO® huisinrichting<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
+					<li><button>Belangstelling<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
+					<li><button>Stenen en onderdelen<img src="images/icons/knopnaarrechts.svg" alt="knop naar rechts"></button></li>
 					<li><a href="#"><p>Exclusieve items</p></a></li>
 					<li><a href="#"><p>Nieuw</p></a></li>
 					<li><a href="#"><p>Best verkocht</p></a></li>
@@ -187,7 +163,7 @@
 		<form> <!--De algemene info over forms heb ik van: https://www.w3schools.com/html/html_forms.asp-->
 			<h2>Abonneren op digitale marketing-e-mails</h2>
 			<input type="email" name="email" placeholder="je e-mailadres"> <!-- Ik heb deze placeholder attribute van: https://stackoverflow.com/questions/781473/how-to-create-a-label-inside-an-input-element-->
-			<button type="submit" class="submitknop" aria-label="Versturen om te abonneren knop"><img src="images/icons/knopnaarrechts.svg" alt="Abonneren" aria-hidden="true"></button>
+			<button type="submit" class="submitknop"><img src="images/icons/knopnaarrechts.svg" alt="Abonneren"></button>
 		</form>
 		<details>
   			<summary>Over ons</summary>
