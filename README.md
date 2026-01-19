@@ -184,8 +184,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  
-Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Tijdens het maken heb ik bewust rekening gehouden met semantische HTML, toetsenbordbediening en ARIA tags. 
+  Hierdoor is de structuur van mijn website overzichtelijk en goed te lezen voor screenreaders.
+  Ik heb gebruik gemaakt van de tag aria-label, om een element een titel te geven als het bijvoorbeeld alleen een icoon is, zodat iemand met een screenreader snapt wat er gebeurt als je bijvoorbeeld op een knop drukt, die geen titel heeft van zichzelf.
+  Ook heb ik gebruik gemaakt van aria-live="polite", wat er voor zorgt dat in de informatietab als JavaScript de tekst verandert, dat de screenreader eerst de hele tekst op leest, voordat het ergens anders heen springt.
+  Ook heb ik bij de modal gebruik gemaakt van aria-labelledby, wat de modal de naam geeft van de bestaande h2 in de modal, zodat iemand met een screenreader direct weet waar de modal over gaat.
+
+  Ik maak gebruik van duidelijke semantische elementen zoals header, nav, main en footer, in combinatie met een skiplink naar de hoofdinhoud. Daarnaast gebruik ik echte button elementen voor interactie, in plaats van div’s, terwijl de LEGO site dit niet doet. Zij hebben heel complexe menu’s en je weet niet goed wat waar staat. Ik kon daar bijvoorbeeld ook niet de inhoud van het hamburgermenu vinden.
+
+  Ook heb ik gebruik gemaakt van een h1 met visually-hidden voor een goede hoofdtitel van de pagina's, terwijl LEGO dit voor de eerste section van hun pagina's gebruikt.
+
+  Ook verandert mijn website heel erg in een dark color scheme, dus daarin is mijn website ook al voor uit gegaan, ten opzichte met die van LEGO zelf. Op hun site verandert namelijk helemaal niks.
+
+  Ik zou graag nog meer aria-labels willen ontdekken, zodat mijn toegankelijkheid nog beter zal worden.
 </details>
 
 
