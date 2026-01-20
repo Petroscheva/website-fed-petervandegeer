@@ -277,7 +277,4 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   9. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
   10. https://www.w3schools.com/jquery/event_stoppropagation.asp#:~:text=The%20event.,was%20called%20for%20the%20event
   11. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors
-  
-
-
 </details>
