@@ -62,7 +62,7 @@ function KlikTerug() {
 
 function sluitTab(event) {
   event.preventDefault();
-  event.stopPropagation(); // ChatGPT het menu sloot niet meer, doordat de modal er bovenop zat, dus dit moest alleen het menu sluiten. vraag:"Kan je ervoor zorgen dat deze knop alleen het menu sluit, zonder dat het iets erboven triggered?"  //
+  event.stopPropagation(); // Het menu sloot niet meer, doordat de modal er bovenop zat, dus dit moest alleen het menu sluiten. Ik heb gebruik gemaakt van: https://www.w3schools.com/jquery/event_stoppropagation.asp#:~:text=The%20event.,was%20called%20for%20the%20event //
   informatietab.classList.add("hidden");
 }
 
@@ -112,7 +112,7 @@ function CarouselKlikVerder() {
   carouselsets.scrollBy({ left: slideWidth, behavior: 'smooth' });
 }
 
-// ChatGPT details open zetten d.m.v. JS vraag: "Hoe kan ik de details automatisch open laten zetten als ik naar een groter scherm dan 900 pixels ga?" //
+// Automatisch details open zetten als de mediaquery matcht. Informatie over details van: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details //
 function zetFooterDetailsOpen() {
   if (mediaQueryDesktop.matches) {
     footerDetails.forEach(function(details) {

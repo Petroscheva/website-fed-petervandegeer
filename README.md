@@ -274,6 +274,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   6. https://stackoverflow.com/questions/781473/how-to-create-a-label-inside-an-input-element
   7. https://www.a11yproject.com/posts/how-to-hide-content/
   8. https://stackoverflow.com/questions/56758098/how-to-position-detail-marker-to-come-after-summary
+  9. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+  10. https://www.w3schools.com/jquery/event_stoppropagation.asp#:~:text=The%20event.,was%20called%20for%20the%20event
+  11. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors
+  
 
 
 </details>
